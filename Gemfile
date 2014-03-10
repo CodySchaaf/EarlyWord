@@ -49,6 +49,9 @@ gem 'unicorn'
 # Gems I added:
 gem 'haml'
 
+#this is for environment vars use: rails generate figaro:install
+gem 'figaro'
+
 group :development do
 	gem "better_errors"
 	gem "binding_of_caller"

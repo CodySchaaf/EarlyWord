@@ -1,4 +1,4 @@
 .row.col-xs-push-2.col-xs-8.box-shadow#main
   = render 'weather_attribute', weather_attribute: 'Temperature:', value: raw("#{@current_observation['temp_f']} " + '&deg; F')
-  %small.text-muted.col-xs-offset-7.sub-text= raw("Feels Like: #{@current_observation['feelslike_f']} &deg; F")
+  %small.text-muted.col-xs-offset-7.sub-text= raw("- Feels Like: #{@current_observation['feelslike_f']} &deg; F")
   = render 'weather_attribute', weather_attribute: 'Humidity:', value: @current_observation['relative_humidity']

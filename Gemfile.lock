@@ -100,6 +100,9 @@ GEM
       paint (>= 0.8.1)
       unicode-display_width (>= 0.1.1)
     ffi (1.9.3)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     formatador (0.2.4)
     g (1.7.2)
     growl (1.0.3)
@@ -316,6 +319,7 @@ DEPENDENCIES
   database_cleaner!
   devise
   factory_girl_rails
+  figaro
   growl
   guard-rspec
   guard-spork

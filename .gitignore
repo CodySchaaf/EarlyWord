@@ -16,3 +16,4 @@
 /tmp
 .idea/codeStyleSettings.xml
 .idea/workspace.xml
+.env

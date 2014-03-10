@@ -53,4 +53,4 @@ group :development do
 	gem 'quiet_assets'
 end
 
-
+gem 'rails_12factor', group: :production

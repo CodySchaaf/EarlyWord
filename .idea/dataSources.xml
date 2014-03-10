@@ -5,21 +5,18 @@
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:early_bird_development</jdbc-url>
-      <user-name>cody</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails early_bird: test" uuid="fd4c5032-4523-4f33-9fa5-9d5a9284940d">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:early_bird_test</jdbc-url>
-      <user-name>early_bird</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails early_bird: production" uuid="0ae934b8-06e3-4748-bed9-2c51e9c1ec3c">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:early_bird_production</jdbc-url>
-      <user-name>early_bird</user-name>
       <libraries />
     </data-source>
   </component>

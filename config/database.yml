@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: early_bird_development
   pool: 5
-  username: cody
+#  username: cody
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,6 @@ test:
   encoding: unicode
   database: early_bird_test
   pool: 5
-  username: early_bird
   password:
 
 production:
@@ -56,5 +55,4 @@ production:
   encoding: unicode
   database: early_bird_production
   pool: 5
-  username: early_bird
   password:

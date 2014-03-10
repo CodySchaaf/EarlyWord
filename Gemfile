@@ -45,6 +45,8 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+# Gems I added:
 gem 'haml'
 
 group :development do
@@ -54,3 +56,25 @@ group :development do
 end
 
 gem 'rails_12factor', group: :production
+
+gem 'devise'
+gem 'barometer'
+
+group :development, :test do
+	gem 'irbtools-more', require: 'binding.repl'
+	gem 'terminal-notifier'
+	gem 'rspec-rails'
+	gem 'guard-rspec'
+	gem 'launchy'
+	gem 'spork-rails'
+	gem 'guard-spork'
+	gem 'childprocess'
+end
+
+group :test do
+	gem 'database_cleaner', github: 'bmabey/database_cleaner'
+	gem 'selenium-webdriver'
+	gem 'capybara'
+	gem 'growl'
+	gem 'factory_girl_rails'
+end

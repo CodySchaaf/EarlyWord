@@ -1,3 +1,3 @@
 EarlyBird::Application.routes.draw do
- root 'users#home'
+ root 'users#weather'
 end

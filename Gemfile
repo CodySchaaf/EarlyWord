@@ -58,7 +58,8 @@ end
 gem 'rails_12factor', group: :production
 
 gem 'devise'
-gem 'barometer'
+#gem 'barometer'
+gem 'typhoeus'
 
 group :development, :test do
 	gem 'irbtools-more', require: 'binding.repl'

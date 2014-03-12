@@ -1,0 +1,3283 @@
+{
+    "response": {
+        "version": "0.1",
+        "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+        "features": {
+            "forecast": 1,
+            "conditions": 1,
+            "hourly": 1
+        }
+    },
+    "current_observation": {
+        "image": {
+            "url": "http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png",
+            "title": "Weather Underground",
+            "link": "http://www.wunderground.com"
+        },
+        "display_location": {
+            "full": "San Francisco, CA",
+            "city": "San Francisco",
+            "state": "CA",
+            "state_name": "California",
+            "country": "US",
+            "country_iso3166": "US",
+            "zip": "94116",
+            "magic": "1",
+            "wmo": "99999",
+            "latitude": "37.74430466",
+            "longitude": "-122.48248291",
+            "elevation": "100.00000000"
+        },
+        "observation_location": {
+            "full": "Forest Hill, San Francisco, California",
+            "city": "Forest Hill, San Francisco",
+            "state": "California",
+            "country": "US",
+            "country_iso3166": "US",
+            "latitude": "37.745262",
+            "longitude": "-122.467010",
+            "elevation": "510 ft"
+        },
+        "estimated": {},
+        "station_id": "KCASANFR48",
+        "observation_time": "Last Updated on March 10, 8:43 PM PDT",
+        "observation_time_rfc822": "Mon, 10 Mar 2014 20:43:47 -0700",
+        "observation_epoch": "1394509427",
+        "local_time_rfc822": "Mon, 10 Mar 2014 20:44:15 -0700",
+        "local_epoch": "1394509455",
+        "local_tz_short": "PDT",
+        "local_tz_long": "America/Los_Angeles",
+        "local_tz_offset": "-0700",
+        "weather": "Clear",
+        "temperature_string": "56.7 F (13.7 C)",
+        "temp_f": 56.7,
+        "temp_c": 13.7,
+        "relative_humidity": "73%",
+        "wind_string": "Calm",
+        "wind_dir": "NNW",
+        "wind_degrees": 336,
+        "wind_mph": 0,
+        "wind_gust_mph": 0,
+        "wind_kph": 0,
+        "wind_gust_kph": 0,
+        "pressure_mb": "1022",
+        "pressure_in": "30.18",
+        "pressure_trend": "+",
+        "dewpoint_string": "48 F (9 C)",
+        "dewpoint_f": 48,
+        "dewpoint_c": 9,
+        "heat_index_string": "NA",
+        "heat_index_f": "NA",
+        "heat_index_c": "NA",
+        "windchill_string": "NA",
+        "windchill_f": "NA",
+        "windchill_c": "NA",
+        "feelslike_string": "56.7 F (13.7 C)",
+        "feelslike_f": "56.7",
+        "feelslike_c": "13.7",
+        "visibility_mi": "10.0",
+        "visibility_km": "16.1",
+        "solarradiation": "--",
+        "UV": "0",
+        "precip_1hr_string": "0.00 in ( 0 mm)",
+        "precip_1hr_in": "0.00",
+        "precip_1hr_metric": " 0",
+        "precip_today_string": "0.05 in (1 mm)",
+        "precip_today_in": "0.05",
+        "precip_today_metric": "1",
+        "icon": "clear",
+        "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+        "forecast_url": "http://www.wunderground.com/US/CA/San_Francisco.html",
+        "history_url": "http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KCASANFR48",
+        "ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=37.745262,-122.467010"
+    },
+    "forecast": {
+        "txt_forecast": {
+            "date": "8:00 PM PDT",
+            "forecastday": [
+                {
+                    "period": 0,
+                    "icon": "chancerain",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/chancerain.gif",
+                    "title": "Monday",
+                    "fcttext": "Partly cloudy with a chance of rain in the morning, then clear. High of 63F. Winds from the NW at 10 to 15 mph. Chance of rain 40%.",
+                    "fcttext_metric": "Partly cloudy with a chance of rain in the morning, then clear. High of 17C. Breezy. Winds from the NW at 15 to 20 km/h. Chance of rain 40%.",
+                    "pop": "40"
+                },
+                {
+                    "period": 1,
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "title": "Monday Night",
+                    "fcttext": "Clear. Low of 50F. Winds from the North at 5 to 10 mph.",
+                    "fcttext_metric": "Clear. Low of 10C. Winds from the North at 10 to 15 km/h.",
+                    "pop": "0"
+                },
+                {
+                    "period": 2,
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "title": "Tuesday",
+                    "fcttext": "Clear. High of 64F. Winds from the North at 10 to 15 mph.",
+                    "fcttext_metric": "Clear. High of 18C. Breezy. Winds from the North at 15 to 20 km/h.",
+                    "pop": "0"
+                },
+                {
+                    "period": 3,
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "title": "Tuesday Night",
+                    "fcttext": "Clear. Low of 48F. Winds from the NNE at 5 to 15 mph.",
+                    "fcttext_metric": "Clear. Low of 9C. Breezy. Winds from the NNE at 10 to 25 km/h.",
+                    "pop": "0"
+                },
+                {
+                    "period": 4,
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "title": "Wednesday",
+                    "fcttext": "Clear. High of 64F. Winds from the NNE at 10 to 15 mph.",
+                    "fcttext_metric": "Clear. High of 18C. Breezy. Winds from the NNE at 15 to 20 km/h.",
+                    "pop": "0"
+                },
+                {
+                    "period": 5,
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "title": "Wednesday Night",
+                    "fcttext": "Clear. Low of 52F. Winds less than 5 mph.",
+                    "fcttext_metric": "Clear. Low of 11C. Winds less than 5 km/h.",
+                    "pop": "0"
+                },
+                {
+                    "period": 6,
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "title": "Thursday",
+                    "fcttext": "Clear. High of 64F. Winds from the WSW at 5 to 15 mph.",
+                    "fcttext_metric": "Clear. High of 18C. Breezy. Winds from the WSW at 10 to 20 km/h.",
+                    "pop": "0"
+                },
+                {
+                    "period": 7,
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "title": "Thursday Night",
+                    "fcttext": "Clear. Low of 48F. Winds less than 5 mph.",
+                    "fcttext_metric": "Clear. Low of 9C. Winds less than 5 km/h.",
+                    "pop": "0"
+                }
+            ]
+        },
+        "simpleforecast": {
+            "forecastday": [
+                {
+                    "date": {
+                        "epoch": "1394517600",
+                        "pretty": "11:00 PM PDT on March 10, 2014",
+                        "day": 10,
+                        "month": 3,
+                        "year": 2014,
+                        "yday": 68,
+                        "hour": 23,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "1",
+                        "monthname": "March",
+                        "monthname_short": "Mar",
+                        "weekday_short": "Mon",
+                        "weekday": "Monday",
+                        "ampm": "PM",
+                        "tz_short": "PDT",
+                        "tz_long": "America/Los_Angeles"
+                    },
+                    "period": 1,
+                    "high": {
+                        "fahrenheit": "63",
+                        "celsius": "17"
+                    },
+                    "low": {
+                        "fahrenheit": "50",
+                        "celsius": "10"
+                    },
+                    "conditions": "Chance of Rain",
+                    "icon": "chancerain",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/chancerain.gif",
+                    "skyicon": "mostlysunny",
+                    "pop": 40,
+                    "qpf_allday": {
+                        "in": 0.03,
+                        "mm": 0.8
+                    },
+                    "qpf_day": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "qpf_night": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "snow_allday": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_day": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_night": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "maxwind": {
+                        "mph": 11,
+                        "kph": 18,
+                        "dir": "NW",
+                        "degrees": 325
+                    },
+                    "avewind": {
+                        "mph": 10,
+                        "kph": 16,
+                        "dir": "NW",
+                        "degrees": 325
+                    },
+                    "avehumidity": 78,
+                    "maxhumidity": 92,
+                    "minhumidity": 63
+                },
+                {
+                    "date": {
+                        "epoch": "1394604000",
+                        "pretty": "11:00 PM PDT on March 11, 2014",
+                        "day": 11,
+                        "month": 3,
+                        "year": 2014,
+                        "yday": 69,
+                        "hour": 23,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "1",
+                        "monthname": "March",
+                        "monthname_short": "Mar",
+                        "weekday_short": "Tue",
+                        "weekday": "Tuesday",
+                        "ampm": "PM",
+                        "tz_short": "PDT",
+                        "tz_long": "America/Los_Angeles"
+                    },
+                    "period": 2,
+                    "high": {
+                        "fahrenheit": "64",
+                        "celsius": "18"
+                    },
+                    "low": {
+                        "fahrenheit": "48",
+                        "celsius": "9"
+                    },
+                    "conditions": "Clear",
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "skyicon": "sunny",
+                    "pop": 0,
+                    "qpf_allday": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "qpf_day": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "qpf_night": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "snow_allday": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_day": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_night": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "maxwind": {
+                        "mph": 12,
+                        "kph": 19,
+                        "dir": "NNE",
+                        "degrees": 25
+                    },
+                    "avewind": {
+                        "mph": 8,
+                        "kph": 13,
+                        "dir": "South",
+                        "degrees": 170
+                    },
+                    "avehumidity": 76,
+                    "maxhumidity": 93,
+                    "minhumidity": 49
+                },
+                {
+                    "date": {
+                        "epoch": "1394690400",
+                        "pretty": "11:00 PM PDT on March 12, 2014",
+                        "day": 12,
+                        "month": 3,
+                        "year": 2014,
+                        "yday": 70,
+                        "hour": 23,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "1",
+                        "monthname": "March",
+                        "monthname_short": "Mar",
+                        "weekday_short": "Wed",
+                        "weekday": "Wednesday",
+                        "ampm": "PM",
+                        "tz_short": "PDT",
+                        "tz_long": "America/Los_Angeles"
+                    },
+                    "period": 3,
+                    "high": {
+                        "fahrenheit": "64",
+                        "celsius": "18"
+                    },
+                    "low": {
+                        "fahrenheit": "52",
+                        "celsius": "11"
+                    },
+                    "conditions": "Clear",
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "skyicon": "sunny",
+                    "pop": 0,
+                    "qpf_allday": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "qpf_day": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "qpf_night": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "snow_allday": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_day": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_night": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "maxwind": {
+                        "mph": 11,
+                        "kph": 18,
+                        "dir": "NE",
+                        "degrees": 48
+                    },
+                    "avewind": {
+                        "mph": 8,
+                        "kph": 13,
+                        "dir": "South",
+                        "degrees": 178
+                    },
+                    "avehumidity": 68,
+                    "maxhumidity": 80,
+                    "minhumidity": 41
+                },
+                {
+                    "date": {
+                        "epoch": "1394776800",
+                        "pretty": "11:00 PM PDT on March 13, 2014",
+                        "day": 13,
+                        "month": 3,
+                        "year": 2014,
+                        "yday": 71,
+                        "hour": 23,
+                        "min": "00",
+                        "sec": 0,
+                        "isdst": "1",
+                        "monthname": "March",
+                        "monthname_short": "Mar",
+                        "weekday_short": "Thu",
+                        "weekday": "Thursday",
+                        "ampm": "PM",
+                        "tz_short": "PDT",
+                        "tz_long": "America/Los_Angeles"
+                    },
+                    "period": 4,
+                    "high": {
+                        "fahrenheit": "64",
+                        "celsius": "18"
+                    },
+                    "low": {
+                        "fahrenheit": "48",
+                        "celsius": "9"
+                    },
+                    "conditions": "Clear",
+                    "icon": "clear",
+                    "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+                    "skyicon": "mostlysunny",
+                    "pop": 0,
+                    "qpf_allday": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "qpf_day": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "qpf_night": {
+                        "in": 0,
+                        "mm": 0
+                    },
+                    "snow_allday": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_day": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "snow_night": {
+                        "in": 0,
+                        "cm": 0
+                    },
+                    "maxwind": {
+                        "mph": 11,
+                        "kph": 18,
+                        "dir": "West",
+                        "degrees": 265
+                    },
+                    "avewind": {
+                        "mph": 8,
+                        "kph": 13,
+                        "dir": "WSW",
+                        "degrees": 253
+                    },
+                    "avehumidity": 69,
+                    "maxhumidity": 89,
+                    "minhumidity": 63
+                }
+            ]
+        }
+    },
+    "hourly_forecast": [
+        {
+            "FCTTIME": {
+                "hour": "21",
+                "hour_padded": "21",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "10",
+                "mday_padded": "10",
+                "yday": "68",
+                "isdst": "1",
+                "epoch": "1394510400",
+                "pretty": "9:00 PM PDT on March 10, 2014",
+                "civil": "9:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Monday",
+                "weekday_name_night": "Monday Night",
+                "weekday_name_abbrev": "Mon",
+                "weekday_name_unlang": "Monday",
+                "weekday_name_night_unlang": "Monday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "56",
+                "metric": "14"
+            },
+            "dewpoint": {
+                "english": "50",
+                "metric": "10"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "6",
+            "wspd": {
+                "english": "7",
+                "metric": "12"
+            },
+            "wdir": {
+                "dir": "NW",
+                "degrees": "325"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "78",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "56",
+                "metric": "14"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.16",
+                "metric": "1021"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "22",
+                "hour_padded": "22",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "10",
+                "mday_padded": "10",
+                "yday": "68",
+                "isdst": "1",
+                "epoch": "1394514000",
+                "pretty": "10:00 PM PDT on March 10, 2014",
+                "civil": "10:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Monday",
+                "weekday_name_night": "Monday Night",
+                "weekday_name_abbrev": "Mon",
+                "weekday_name_unlang": "Monday",
+                "weekday_name_night_unlang": "Monday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "56",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "50",
+                "metric": "10"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "6",
+            "wspd": {
+                "english": "7",
+                "metric": "11"
+            },
+            "wdir": {
+                "dir": "NW",
+                "degrees": "325"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "81",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "56",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.16",
+                "metric": "1021"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "23",
+                "hour_padded": "23",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "10",
+                "mday_padded": "10",
+                "yday": "68",
+                "isdst": "1",
+                "epoch": "1394517600",
+                "pretty": "11:00 PM PDT on March 10, 2014",
+                "civil": "11:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Monday",
+                "weekday_name_night": "Monday Night",
+                "weekday_name_abbrev": "Mon",
+                "weekday_name_unlang": "Monday",
+                "weekday_name_night_unlang": "Monday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "50",
+                "metric": "10"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "6",
+                "metric": "10"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "358"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "83",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.18",
+                "metric": "1022"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "0",
+                "hour_padded": "00",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394521200",
+                "pretty": "12:00 AM PDT on March 11, 2014",
+                "civil": "12:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "49",
+                "metric": "9"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "7",
+                "metric": "11"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "358"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "79",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.18",
+                "metric": "1022"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "1",
+                "hour_padded": "01",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394524800",
+                "pretty": "1:00 AM PDT on March 11, 2014",
+                "civil": "1:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "47",
+                "metric": "9"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "7",
+                "metric": "12"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "358"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "75",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.18",
+                "metric": "1022"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "2",
+                "hour_padded": "02",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394528400",
+                "pretty": "2:00 AM PDT on March 11, 2014",
+                "civil": "2:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "46",
+                "metric": "8"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "8",
+                "metric": "13"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "357"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "71",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.16",
+                "metric": "1021"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "3",
+                "hour_padded": "03",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394532000",
+                "pretty": "3:00 AM PDT on March 11, 2014",
+                "civil": "3:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "53",
+                "metric": "12"
+            },
+            "dewpoint": {
+                "english": "44",
+                "metric": "7"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "8",
+                "metric": "13"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "357"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "70",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "53",
+                "metric": "12"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.16",
+                "metric": "1021"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "4",
+                "hour_padded": "04",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394535600",
+                "pretty": "4:00 AM PDT on March 11, 2014",
+                "civil": "4:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "52",
+                "metric": "11"
+            },
+            "dewpoint": {
+                "english": "41",
+                "metric": "5"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "9",
+                "metric": "14"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "357"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "70",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "52",
+                "metric": "11"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.16",
+                "metric": "1021"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "5",
+                "hour_padded": "05",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394539200",
+                "pretty": "5:00 AM PDT on March 11, 2014",
+                "civil": "5:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "50",
+                "metric": "10"
+            },
+            "dewpoint": {
+                "english": "39",
+                "metric": "4"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "9",
+                "metric": "14"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "20"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "69",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "50",
+                "metric": "10"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.11",
+                "metric": "1019"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "6",
+                "hour_padded": "06",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394542800",
+                "pretty": "6:00 AM PDT on March 11, 2014",
+                "civil": "6:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "50",
+                "metric": "10"
+            },
+            "dewpoint": {
+                "english": "39",
+                "metric": "4"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "10",
+                "metric": "16"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "20"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "68",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "50",
+                "metric": "10"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.11",
+                "metric": "1019"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "7",
+                "hour_padded": "07",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394546400",
+                "pretty": "7:00 AM PDT on March 11, 2014",
+                "civil": "7:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "50",
+                "metric": "10"
+            },
+            "dewpoint": {
+                "english": "39",
+                "metric": "4"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "11",
+                "metric": "17"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "20"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "66",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "50",
+                "metric": "10"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.11",
+                "metric": "1019"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "8",
+                "hour_padded": "08",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394550000",
+                "pretty": "8:00 AM PDT on March 11, 2014",
+                "civil": "8:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "50",
+                "metric": "10"
+            },
+            "dewpoint": {
+                "english": "39",
+                "metric": "4"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "12",
+                "metric": "19"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "25"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "65",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "50",
+                "metric": "10"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.09",
+                "metric": "1018"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "9",
+                "hour_padded": "09",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394553600",
+                "pretty": "9:00 AM PDT on March 11, 2014",
+                "civil": "9:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "53",
+                "metric": "12"
+            },
+            "dewpoint": {
+                "english": "41",
+                "metric": "5"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "11",
+                "metric": "18"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "25"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "62",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "53",
+                "metric": "12"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.09",
+                "metric": "1018"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "10",
+                "hour_padded": "10",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394557200",
+                "pretty": "10:00 AM PDT on March 11, 2014",
+                "civil": "10:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "56",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "43",
+                "metric": "6"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "11",
+                "metric": "17"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "25"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "60",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "56",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.09",
+                "metric": "1018"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "11",
+                "hour_padded": "11",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394560800",
+                "pretty": "11:00 AM PDT on March 11, 2014",
+                "civil": "11:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "59",
+                "metric": "15"
+            },
+            "dewpoint": {
+                "english": "45",
+                "metric": "7"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "10",
+                "metric": "16"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "15"
+            },
+            "wx": "",
+            "uvi": "2",
+            "humidity": "57",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "59",
+                "metric": "15"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.08",
+                "metric": "1018"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "12",
+                "hour_padded": "12",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394564400",
+                "pretty": "12:00 PM PDT on March 11, 2014",
+                "civil": "12:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "60",
+                "metric": "16"
+            },
+            "dewpoint": {
+                "english": "45",
+                "metric": "7"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "10",
+                "metric": "16"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "15"
+            },
+            "wx": "",
+            "uvi": "2",
+            "humidity": "54",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "60",
+                "metric": "16"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.08",
+                "metric": "1018"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "13",
+                "hour_padded": "13",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394568000",
+                "pretty": "1:00 PM PDT on March 11, 2014",
+                "civil": "1:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "62",
+                "metric": "16"
+            },
+            "dewpoint": {
+                "english": "45",
+                "metric": "7"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "10",
+                "metric": "16"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "15"
+            },
+            "wx": "",
+            "uvi": "2",
+            "humidity": "52",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "62",
+                "metric": "16"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.08",
+                "metric": "1018"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "14",
+                "hour_padded": "14",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394571600",
+                "pretty": "2:00 PM PDT on March 11, 2014",
+                "civil": "2:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "63",
+                "metric": "17"
+            },
+            "dewpoint": {
+                "english": "45",
+                "metric": "7"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "10",
+                "metric": "16"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "0"
+            },
+            "wx": "",
+            "uvi": "4",
+            "humidity": "49",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "63",
+                "metric": "17"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "15",
+                "hour_padded": "15",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394575200",
+                "pretty": "3:00 PM PDT on March 11, 2014",
+                "civil": "3:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "62",
+                "metric": "17"
+            },
+            "dewpoint": {
+                "english": "45",
+                "metric": "7"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "9",
+                "metric": "14"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "0"
+            },
+            "wx": "",
+            "uvi": "4",
+            "humidity": "53",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "62",
+                "metric": "17"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "16",
+                "hour_padded": "16",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394578800",
+                "pretty": "4:00 PM PDT on March 11, 2014",
+                "civil": "4:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "62",
+                "metric": "16"
+            },
+            "dewpoint": {
+                "english": "46",
+                "metric": "8"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "8",
+                "metric": "13"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "0"
+            },
+            "wx": "",
+            "uvi": "4",
+            "humidity": "57",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "62",
+                "metric": "16"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "17",
+                "hour_padded": "17",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394582400",
+                "pretty": "5:00 PM PDT on March 11, 2014",
+                "civil": "5:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "61",
+                "metric": "16"
+            },
+            "dewpoint": {
+                "english": "46",
+                "metric": "8"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "7",
+                "metric": "11"
+            },
+            "wdir": {
+                "dir": "NNW",
+                "degrees": "332"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "61",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "61",
+                "metric": "16"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.00",
+                "metric": "1015"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "18",
+                "hour_padded": "18",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394586000",
+                "pretty": "6:00 PM PDT on March 11, 2014",
+                "civil": "6:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "59",
+                "metric": "15"
+            },
+            "dewpoint": {
+                "english": "49",
+                "metric": "9"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "7",
+                "metric": "12"
+            },
+            "wdir": {
+                "dir": "NNW",
+                "degrees": "332"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "72",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "59",
+                "metric": "15"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.00",
+                "metric": "1015"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "19",
+                "hour_padded": "19",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394589600",
+                "pretty": "7:00 PM PDT on March 11, 2014",
+                "civil": "7:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "57",
+                "metric": "14"
+            },
+            "dewpoint": {
+                "english": "51",
+                "metric": "11"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "8",
+                "metric": "12"
+            },
+            "wdir": {
+                "dir": "NNW",
+                "degrees": "332"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "82",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "57",
+                "metric": "14"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.00",
+                "metric": "1015"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "20",
+                "hour_padded": "20",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394593200",
+                "pretty": "8:00 PM PDT on March 11, 2014",
+                "civil": "8:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "54",
+                "metric": "12"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "8",
+                "metric": "13"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "360"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "93",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.02",
+                "metric": "1016"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "21",
+                "hour_padded": "21",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394596800",
+                "pretty": "9:00 PM PDT on March 11, 2014",
+                "civil": "9:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "52",
+                "metric": "11"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "8",
+                "metric": "13"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "360"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "88",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.02",
+                "metric": "1016"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "22",
+                "hour_padded": "22",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394600400",
+                "pretty": "10:00 PM PDT on March 11, 2014",
+                "civil": "10:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "50",
+                "metric": "10"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "8",
+                "metric": "13"
+            },
+            "wdir": {
+                "dir": "North",
+                "degrees": "360"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "83",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.02",
+                "metric": "1016"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "23",
+                "hour_padded": "23",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "11",
+                "mday_padded": "11",
+                "yday": "69",
+                "isdst": "1",
+                "epoch": "1394604000",
+                "pretty": "11:00 PM PDT on March 11, 2014",
+                "civil": "11:00 PM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Tuesday",
+                "weekday_name_night": "Tuesday Night",
+                "weekday_name_abbrev": "Tue",
+                "weekday_name_unlang": "Tuesday",
+                "weekday_name_night_unlang": "Tuesday Night",
+                "ampm": "PM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "48",
+                "metric": "9"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "1",
+            "wspd": {
+                "english": "8",
+                "metric": "13"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "17"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "78",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "0",
+                "hour_padded": "00",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394607600",
+                "pretty": "12:00 AM PDT on March 12, 2014",
+                "civil": "12:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "46",
+                "metric": "8"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "1",
+            "wspd": {
+                "english": "10",
+                "metric": "16"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "17"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "71",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "1",
+                "hour_padded": "01",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394611200",
+                "pretty": "1:00 AM PDT on March 12, 2014",
+                "civil": "1:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "43",
+                "metric": "6"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "1",
+            "wspd": {
+                "english": "12",
+                "metric": "19"
+            },
+            "wdir": {
+                "dir": "NNE",
+                "degrees": "17"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "63",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "2",
+                "hour_padded": "02",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394614800",
+                "pretty": "2:00 AM PDT on March 12, 2014",
+                "civil": "2:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "41",
+                "metric": "5"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "1",
+            "wspd": {
+                "english": "14",
+                "metric": "22"
+            },
+            "wdir": {
+                "dir": "NE",
+                "degrees": "45"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "56",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.05",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "3",
+                "hour_padded": "03",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394618400",
+                "pretty": "3:00 AM PDT on March 12, 2014",
+                "civil": "3:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "40",
+                "metric": "5"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "1",
+            "wspd": {
+                "english": "13",
+                "metric": "21"
+            },
+            "wdir": {
+                "dir": "NE",
+                "degrees": "45"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "55",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.05",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "4",
+                "hour_padded": "04",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394622000",
+                "pretty": "4:00 AM PDT on March 12, 2014",
+                "civil": "4:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "40",
+                "metric": "4"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "1",
+            "wspd": {
+                "english": "12",
+                "metric": "19"
+            },
+            "wdir": {
+                "dir": "NE",
+                "degrees": "45"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "54",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.05",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "5",
+                "hour_padded": "05",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394625600",
+                "pretty": "5:00 AM PDT on March 12, 2014",
+                "civil": "5:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "55",
+                "metric": "13"
+            },
+            "dewpoint": {
+                "english": "39",
+                "metric": "4"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "11",
+                "metric": "18"
+            },
+            "wdir": {
+                "dir": "NE",
+                "degrees": "48"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "53",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "55",
+                "metric": "13"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "6",
+                "hour_padded": "06",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394629200",
+                "pretty": "6:00 AM PDT on March 12, 2014",
+                "civil": "6:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "53",
+                "metric": "12"
+            },
+            "dewpoint": {
+                "english": "40",
+                "metric": "4"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "11",
+                "metric": "18"
+            },
+            "wdir": {
+                "dir": "NE",
+                "degrees": "48"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "59",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "53",
+                "metric": "12"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "7",
+                "hour_padded": "07",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394632800",
+                "pretty": "7:00 AM PDT on March 12, 2014",
+                "civil": "7:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "52",
+                "metric": "11"
+            },
+            "dewpoint": {
+                "english": "40",
+                "metric": "5"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "11",
+                "metric": "18"
+            },
+            "wdir": {
+                "dir": "NE",
+                "degrees": "48"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "65",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "52",
+                "metric": "11"
+            },
+            "qpf": {
+                "english": "",
+                "metric": ""
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.04",
+                "metric": "1017"
+            }
+        },
+        {
+            "FCTTIME": {
+                "hour": "8",
+                "hour_padded": "08",
+                "min": "00",
+                "sec": "0",
+                "year": "2014",
+                "mon": "3",
+                "mon_padded": "03",
+                "mon_abbrev": "Mar",
+                "mday": "12",
+                "mday_padded": "12",
+                "yday": "70",
+                "isdst": "1",
+                "epoch": "1394636400",
+                "pretty": "8:00 AM PDT on March 12, 2014",
+                "civil": "8:00 AM",
+                "month_name": "March",
+                "month_name_abbrev": "Mar",
+                "weekday_name": "Wednesday",
+                "weekday_name_night": "Wednesday Night",
+                "weekday_name_abbrev": "Wed",
+                "weekday_name_unlang": "Wednesday",
+                "weekday_name_night_unlang": "Wednesday Night",
+                "ampm": "AM",
+                "tz": "",
+                "age": ""
+            },
+            "temp": {
+                "english": "50",
+                "metric": "10"
+            },
+            "dewpoint": {
+                "english": "41",
+                "metric": "5"
+            },
+            "condition": "Clear",
+            "icon": "clear",
+            "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+            "fctcode": "1",
+            "sky": "0",
+            "wspd": {
+                "english": "11",
+                "metric": "18"
+            },
+            "wdir": {
+                "dir": "NE",
+                "degrees": "48"
+            },
+            "wx": "",
+            "uvi": "0",
+            "humidity": "71",
+            "windchill": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "heatindex": {
+                "english": "-9998",
+                "metric": "-9998"
+            },
+            "feelslike": {
+                "english": "50",
+                "metric": "10"
+            },
+            "qpf": {
+                "english": "0.00",
+                "metric": "0.00"
+            },
+            "snow": {
+                "english": "",
+                "metric": ""
+            },
+            "pop": "0",
+            "mslp": {
+                "english": "30.08",
+                "metric": "1018"
+            }
+        }
+    ]
+}

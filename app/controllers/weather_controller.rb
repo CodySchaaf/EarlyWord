@@ -1,15 +1,21 @@
 class WeatherController < ApplicationController
 	def new
-		#Barometer.config = { 1 => [:yahoo], 2 => :wunderground }
-		#barometer = Barometer.new('94116')
-		#weather = barometer.measure
+		@weather = Weather.new
+	end
 
-		zip_code = '94118'
+	def create
+		zip_code = weather_params[:weather]
 
-		@user_weather = Weather.get_weather zip_code
+		@weather = Weather.get_weather zip_code
 
-		@current_observation = @user_weather['current_observation']
+		user_weather = @weather.json
 
-		#weather.responses.first.forecast
+		@current_observation = user_weather['current_observation']
+
+		redirect_to :show
+	end
+
+	def show
+
 	end
 end

@@ -1,3 +1,6 @@
-= render 'new_attribute', weather_attribute: 'Temperature:', value: raw("#{@current_observation['temp_f']} " + '&deg; F')
-%small.text-muted.col-xs-offset-7.sub-text= raw("- Feels Like: #{@current_observation['feelslike_f']} &deg; F")
-= render 'new_attribute', weather_attribute: 'Humidity:', value: @current_observation['relative_humidity']
+= simple_form_for @weather, class: 'form-inline', default: {label_html: 'sr-only'} do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :zip_code
+  .form_actions
+    = f.button :submit

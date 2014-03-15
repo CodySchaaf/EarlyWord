@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-EarlyBird::Application.config.secret_key_base = '8620a0fde71a89139ae1c8657328f86e6c0ce20d709d2df6d1f5a403a58c36e5ebd2867e46a467ead42311bac463e342a44f85bd3d2c539aeae0792f600498bc'
+EarlyBird::Application.config.secret_key_base = ENV['SECRET_TOKEN']

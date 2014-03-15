@@ -52,6 +52,13 @@ gem 'haml'
 #this is for environment vars use: rails generate figaro:install
 gem 'figaro'
 
+# Devise for sign_up
+gem 'devise'
+
+gem 'html2haml'
+
+gem 'simple_form'
+
 group :development do
 	gem "better_errors"
 	gem "binding_of_caller"
@@ -60,7 +67,6 @@ end
 
 gem 'rails_12factor', group: :production
 
-gem 'devise'
 #gem 'barometer'
 gem 'typhoeus'
 

@@ -10,7 +10,9 @@
     = render 'layouts/header'
     .container-fluid
       #wrapper
-        = yield
-        .push
+        .row.col-xs-push-2.col-xs-8.box-shadow#main
+          = render 'layouts/flash_messages'
+          = yield
+          .push
         = render 'layouts/footer'
         = debug(params) if Rails.env.development?

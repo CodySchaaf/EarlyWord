@@ -1,5 +1,5 @@
-class UsersController < ApplicationController
-	def weather
+class WeatherController < ApplicationController
+	def new
 		#Barometer.config = { 1 => [:yahoo], 2 => :wunderground }
 		#barometer = Barometer.new('94116')
 		#weather = barometer.measure

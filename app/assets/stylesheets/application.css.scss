@@ -26,10 +26,21 @@ $grayMediumLight: #eaeaea;
 
 /* universal */
 
+div#main {
+  min-height: 100%;
+  position:relative;
+  border-radius: 20px;
+  padding: 0px 20px 20px 20px;
+  margin-top: 60px;
+  //  border: outset $gray-light;
+  background: $grayMediumLight;
+}
+
 #wrapper {
   min-height: 100%;
   height: auto;
   margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+//  padding-top: 60px;
   padding: 0 0 60px;
 }
 
@@ -41,7 +52,7 @@ html, body {
 
 body {
   background: $gray-light !important;
-  padding-top: 60px;
+//  padding-top: 60px;
 }
 
 section {

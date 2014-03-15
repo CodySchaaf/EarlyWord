@@ -1,3 +1,6 @@
 EarlyBird::Application.routes.draw do
- root 'users#weather'
+  devise_for :users
+  root 'weather#new'
+
+
 end

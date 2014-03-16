@@ -1,6 +1,6 @@
 EarlyBird::Application.routes.draw do
   #devise_for :users, except: [:registrations]
-  devise_for :users, :controllers => { :registrations => 'users' }
+  devise_for :users, :controllers => { :registrations => 'registrations' }
 
   root 'weathers#new'
 

@@ -1,0 +1,6 @@
+%h2 Welcome
+= simple_form_for @weather, html: { class: 'form-inline center'},  defaults: { label_html: { class: 'sr-only' } } do |f|
+  = f.error_notification
+  .form-group
+    = f.input :zip_code, required: false, placeholder: 'Zip Code'
+  = f.button :submit, class: 'btn-primary'

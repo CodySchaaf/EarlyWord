@@ -10,10 +10,15 @@ class Weather < ActiveRecord::Base
 	end
 
 	def self.get_weather(new_weather)
-		stored_weather = Weather.find_by_zip_code new_weather.zip_code
+		stored_weather = Weather.find_by_zip_code new_weather['zip_code']
 
 		stored_weather ? stored_weather.update_json :
-				Weather.create({ zip_code: zip_code, json: get_current_weather(zip_code) })
+				Weather.create_new(new_weather)
+	end
+
+	def update_json
+		update_attribute(:json, get_current_weather(zip_code)) unless self.current?
+		self
 	end
 
 	#def self.get_weather_for_user(user)
@@ -22,17 +27,17 @@ class Weather < ActiveRecord::Base
 
 	private
 
-		def get_current_weather(zip_code)
+		def self.create_new(new_weather)
+			self.create({ zip_code: new_weather['zip_code'], json: self.get_current_weather(new_weather['zip_code']) })
+		end
+
+		def self.get_current_weather(zip_code)
 			response = Typhoeus.get "http://api.wunderground.com/api/#{ENV['WUNDER_GROUND_KEY']}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true
 			JSON.parse response.body
 		end
 
-		def self.update_json
-			self.update_attribute(:json, get_current_weather(zip_code)) unless current?
-		end
-
 		def weather_params
-			params.require(:weather).permit(:zip_code)
+			params.require(:weathers).permit(:zip_code)
 		end
 
 		def set_updated_at

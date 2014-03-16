@@ -4,7 +4,8 @@
   .form-inputs
     = f.input :name, required: true, placeholder: 'Name'#, label: false
     = f.input :email, required: true, autofocus: true, placeholder: 'Email'#, label: false
-    = f.input :zip_code, placeholder: 'Zip Code'#, label: false
+    = simple_fields_for @zip_code, defaults: { label_html: { class: 'sr-only' } } do |fz|
+      = fz.input :zip_code, placeholder: 'Zip Code'#, label: false
     = f.input :password, required: true, placeholder: 'Password'#, label: false
     = f.input :password_confirmation, required: true, placeholder: 'Confirm Password'#, label: false
   .form-actions

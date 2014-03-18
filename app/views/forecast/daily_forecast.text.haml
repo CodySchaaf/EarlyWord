@@ -1,16 +1,11 @@
-RailsCasts - Ruby on Rails Screencasts
-
-Weekly Episodes
+= "Forecast For #{@user.name} (#{@user.zip_code})"
 
 = '---------------------------------------------'
 
-Episode 310: Getting Started with Rails
+= "The Weather Outside In #{@user.json['current_observation']['display_location']['full']}"
 
-Learning Ruby on Rails can be overwhelming, especially if you are new to programming. Here I will take you on a tour through various resources to help get started with Rails.
+Temperature:
 
-Watch Episode (7 minutes):
-http://railscasts.com/episodes/310-getting-started-with-rails
+= "#{@user.json['current_observation']['temp_f']}"
 
 = '---------------------------------------------'
-
-(rest of file omitted)

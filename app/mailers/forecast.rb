@@ -11,7 +11,10 @@ class Forecast < ActionMailer::Base
 
   def send_forecast_email(user)
 	  @user = user
-	  mail( :to => @user.email,
-	        :subject => 'Good Morning, here is your daily forecast!', css: 'emails/forecast'  )
+	  mail(
+			  to: @user.email,
+        subject: 'Good Morning, here is your daily forecast!',
+        css: 'emails/forecast'
+	  )
   end
 end

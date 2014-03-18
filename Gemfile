@@ -63,9 +63,12 @@ gem 'simple_form'
 # Transform css style sheet to inline styles for emails
 gem 'roadie'
 
+# Delayed jobs, used to schedule weekly news letter
+gem 'delayed_job_active_record'
+
 group :development do
-	gem "better_errors"
-	gem "binding_of_caller"
+	gem 'better_errors'
+	gem 'binding_of_caller'
 	gem 'quiet_assets'
 	gem 'meta_request'
 end

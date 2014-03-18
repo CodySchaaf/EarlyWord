@@ -3,6 +3,7 @@ class Forecast < ActionMailer::Base
 
   def send_sign_up_email(user)
 	  @user = user
+	  @user = user
 	  mail( :to => @user.email,
 	        :subject => 'Thanks for signing up for our amazing app')
 	  end

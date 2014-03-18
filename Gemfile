@@ -59,6 +59,9 @@ gem 'html2haml'
 
 gem 'simple_form'
 
+# Transform css style sheet to inline styles for emails
+gem 'roadie'
+
 group :development do
 	gem "better_errors"
 	gem "binding_of_caller"

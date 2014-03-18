@@ -17,7 +17,7 @@ class Weather < ActiveRecord::Base
 	end
 
 	def update_json
-		update_attribute(:json, get_current_weather(zip_code)) unless self.current?
+		update_attribute(:json, Weather.get_current_weather(zip_code)) unless self.current?
 		self
 	end
 
@@ -33,7 +33,12 @@ class Weather < ActiveRecord::Base
 
 		def self.get_current_weather(zip_code)
 			response = Typhoeus.get "http://api.wunderground.com/api/#{ENV['WUNDER_GROUND_KEY']}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true
-			JSON.parse response.body
+			if ENV['RAILS_ENV'] == 'development' && response.response_code.to_s == '504'
+				logger.debug('And Error Occurred with wunderground, using lame data.')
+				JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
+			else
+				JSON.parse response.body
+			end
 		end
 
 		def weather_params

@@ -23,6 +23,9 @@ Things you may want to cover:
 
 * ...
 
+* To use mailcatcher:
+
+* Simply run gem install mailcatcher then mailcatcher to get started.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

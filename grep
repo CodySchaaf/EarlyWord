@@ -1,0 +1,4 @@
+ERROR: "bundle install" was called with arguments ["sql"]
+Usage: "bundle install"
+ERROR: "bundle install" was called with arguments ["sqlgem", "install", "mailcatcher"]
+Usage: "bundle install"

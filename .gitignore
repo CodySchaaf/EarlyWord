@@ -18,3 +18,6 @@
 .env
 # Ignore application configuration
 /config/application.yml
+
+#Ignore File created for secret key
+.secret

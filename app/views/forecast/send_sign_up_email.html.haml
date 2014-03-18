@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+  %body
+    %table#background{border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+      %tr
+        %td{align: "center", valign: "top"}
+          %table#main{border: "0", cellpadding: "0", cellspacing: "20", width: "650"}
+            %tr
+              %td#header{colspan: "2"}
+                %h1
+                  = "Thanks for signing up, #{@user.name}!"
+            %tr
+              %td.divider{bgcolor: "#555555", colspan: "2", height: "2"}
+            %tr.weather
+              %td
+                %p
+                  Thanks for joining and have a great day! Now sign in and do
+                  awesome things!
+            %tr
+              %td.divider{bgcolor: "#555555", colspan: "2", height: "2"}
+            %tr
+              %td#footer{align: "center", colspan: "2"}
+                %p
+                  %a{href: "#"} Unsubscribe
+                  if you do not wish to receive these emails in the future.
+                %p ©2011 RailsCasts

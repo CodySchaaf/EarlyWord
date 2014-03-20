@@ -78,16 +78,20 @@ EarlyBird::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000.com' }
+  #config.action_mailer.default_url_options = { :host => 'localhost:3000.com' }
   #TODO fill out and secretify
-  config.action_mailer.smtp_settings =  {
-		  :enable_starttls_auto => true,
-		  :address        => 'smtp.gmail.com',
-		  :port           => 587,                                   # default port for gmail.
-		  :domain         => 'earlybird.heroku.com',
-		  :authentication => :login,
-		  :content_type   => "text/html",
-		  :user_name      => 'youremail@gmail.com',
-		  :password       => 'password'
-  }
+  #config.action_mailer.smtp_settings =  {
+		#  :enable_starttls_auto => true,
+		#  :address        => 'smtp.gmail.com',
+		#  :port           => 587,                                   # default port for gmail.
+		#  :domain         => 'earlybird.heroku.com',
+		#  :authentication => :login,
+		#  :content_type   => "text/html",
+		#  :user_name      => 'youremail@gmail.com',
+		#  :password       => 'password'
+  #}
+  config.action_mailer.default_url_options = { :host => 'localhost', port: 3000 }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025, :enable_starttls_auto => true }
 end

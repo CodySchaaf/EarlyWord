@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-	before_filter :update_sanitized_params, if: :devise_controller?
+	before_filter :update_sanitized_params,  :only => [:create]
 
 	def new
 		@zip_code = Weather.new
@@ -8,9 +8,11 @@ class RegistrationsController < Devise::RegistrationsController
 
 	def create
 		zip_code = weather_params
-
 		@weather = Weather.get_weather zip_code
 		session[:zip_code] = zip_code['zip_code']
+
+		params[:user][:zip_code_id] = @weather.id
+
 		super
 	end
 
@@ -37,7 +39,7 @@ class RegistrationsController < Devise::RegistrationsController
 		end
 
 		def update_sanitized_params
-			devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation) }
+			devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation, :zip_code_id) }
 		end
 
 	private

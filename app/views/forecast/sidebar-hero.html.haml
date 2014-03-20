@@ -1,0 +1,132 @@
+!!!
+%html
+  %head
+    / If you delete this meta tag, Half Life 3 will never be released.
+    %meta{content: "width=device-width", name: "viewport"}
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title ZURBemails
+    %link{href: "stylesheets/emails/zurb_email.css", rel: "stylesheet", type: "text/css"}
+  %body{bgcolor: "#FFFFFF", leftmargin: "0", marginheight: "0", marginwidth: "0", topmargin: "0"}
+    /
+      \----------------------------------
+      \---- HEADER --------------------------
+      \-----------------------------------
+    -#%table.head-wrap{bgcolor: "#999999"}
+    %table.head-wrap{bgcolor: "#043948"}
+      %tr
+        %td
+        %td.header.container
+          .content
+            -#%table{bgcolor: "#999999"}
+            %table{bgcolor: "#043948"}
+              %tr
+                %td
+                  %img{src: "http://placehold.it/200x50/"}
+                %td{align: "right"}
+                  %h6.collapse Sidebar Hero
+        %td
+    /
+      \----------------------------------
+      \---- BODY ----------------------------
+      \-----------------------------------
+    %table.body-wrap
+      %tr
+        %td
+        %td.container{bgcolor: "#FFFFFF"}
+          / content
+          .content
+            %table
+              %tr
+                %td
+                  %h1 Welcome, Hari Seldon
+                  %p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                  / A Real Hero (and a real human being)
+                  %p
+                    %img{src: "http://placehold.it/600x300"}/
+                  / /hero
+                  / Callout Panel
+                  %p.callout
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolor sit amet, consectetur adipisicing elit.
+                    %a{href: "#"} Do it Now! »
+                  / /Callout Panel
+          / COLUMN WRAP
+          .column-wrap
+            .column
+              %table{align: "left"}
+                %tr
+                  %td
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet.
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet.
+                    %a.btn Click Here »
+            .column
+              %table{align: "left"}
+                %tr
+                  %td
+                    %ul.sidebar
+                      %li
+                        %a
+                          %h5 Header Thing »
+                          %p Sub-head or something
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a Just a Plain Link »
+                      %li
+                        %a.last Just a Plain Link »
+                    / social & contact
+                    %table.social{bgcolor: "", width: "100%"}
+                      %tr
+                        %td
+                          %table{align: "left", width: "100%"}
+                            %tr
+                              %td
+                                %h6 Connect with Us:
+                                %p
+                                  %a.soc-btn.fb{href: "#"} Facebook
+                                  %a.soc-btn.tw{href: "#"} Twitter
+                                  %a.soc-btn.gp{href: "#"} Google+
+                                %h6 Contact Info:
+                                %p
+                                  Phone:
+                                  %strong 408.341.0600
+                                  %br/
+                                  Email:
+                                  %strong
+                                    %a{href: "emailto:hseldon@trantor.com"} hseldon@trantor.com
+                    / /social & contact
+            .clear
+          / /COLUMN WRAP
+        %td
+    / FOOTER
+    %table.footer-wrap
+      %tr
+        %td
+        %td.container
+          / content
+          .content
+            %table
+              %tr
+                %td{align: "center"}
+                  %p
+                    %a{href: "#"} Terms
+                    |
+                    %a{href: "#"} Privacy
+                    |
+                    %a{href: "#"}
+                      %unsubscribe Unsubscribe
+          / /content
+        %td
+    / /FOOTER

@@ -10,11 +10,13 @@ class Forecast < ActionMailer::Base
 
 
   def send_forecast_email(user)
+		logger.debug('We are inside the send forecast email method!')
 	  @user = user
+		@weather = Weather.find(user.zip_code_id)
 	  mail(
 			  to: @user.email,
-        subject: 'Good Morning, here is your daily forecast!',
-        css: 'emails/forecast'
+        subject: 'Good Morning, here is your daily forecast!'
+        #css: 'emails/forecast'
 	  )
   end
 end

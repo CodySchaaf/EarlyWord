@@ -9,6 +9,23 @@ class User < ActiveRecord::Base
   after_create :send_sign_up_email
   after_create :schedule_forecast_email
 
+  def update_forecast_schedule(new_time=nil)
+	  logger.debug('We are now updating the forecast schedule')
+	  if new_time
+		  self.update_attribute(:forecast_scheduled_at, new_time.tomorrow)
+	  else
+		  self.update_attribute(:forecast_scheduled_at, self.forecast_scheduled_at.tomorrow)
+	  end
+  end
+
+  def schedule_forecast_email
+	  logger.debug('We are now scheduling the forecast job!')
+	  if self.zip_code_id && self.forecast_scheduled_at
+		  Delayed::Job.enqueue(ForecastJob.new(self), :run_at => self.forecast_scheduled_at)
+		  logger.debug('We have scheduled the forecast job!')
+	  end
+  end
+
 	private
 
 		def send_sign_up_email
@@ -17,21 +34,7 @@ class User < ActiveRecord::Base
 		end
 
     def set_forecast_schedule
-			self.update_attribute(:forecast_scheduled_at, Time.parse('02:00:00 AM').tomorrow)
+			self.forecast_scheduled_at = Time.parse('02:00:00 AM')
     end
-
-    def update_forecast_schedule(new_time=nil)
-			if new_time
-				self.update_attribute(:forecast_scheduled_at, self.new_time.tomorrow)
-			else
-	      self.update_attribute(:forecast_scheduled_at, self.forecast_scheduled_at.tomorrow)
-			end
-    end
-
-		def schedule_forecast_email
-			if self.zip_code_id && self.forecast_scheduled_at
-				Delayed::Job.enqueue(ForecastJob.new(self), :run_at => self.forecast_scheduled_at)
-			end
-		end
 
 end

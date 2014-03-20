@@ -66,6 +66,8 @@ gem 'roadie'
 # Delayed jobs, used to schedule weekly news letter
 gem 'delayed_job_active_record'
 
+# Deamons used to run delayed_jobs
+gem 'daemons'
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'

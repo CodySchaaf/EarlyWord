@@ -1,0 +1,11 @@
+= "Forecast For #{@user.name} (#{@weather.zip_code})"
+
+= '---------------------------------------------'
+
+= "The Weather Outside In #{@weather.json['current_observation']['display_location']['full']}"
+
+Temperature:
+
+= "#{@weather.json['current_observation']['temp_f']}"
+
+= '---------------------------------------------'

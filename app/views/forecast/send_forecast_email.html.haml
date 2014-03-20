@@ -2,7 +2,7 @@
 %html
   %head
     %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %title RailsCasts Weekly
+    %title = "Forecast For #{@user.name} (#{@weather.zip_code})"
   %body
     %table#background{border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
       %tr
@@ -19,9 +19,13 @@
                 %a{href: "#"}
                   %img{alt: "#310 Getting Started with Rails", height: "125", src: "http://railscasts.com/assets/episodes/stills/310-getting-started-with-rails.png", width: "200"}/
               %td{valign: "top"}
-                %h2 #310 Getting Started with Rails
-                %p Learning Ruby on Rails can be overwhelming, especially if you are new to programming. Here I will take you on a tour through various resources to help get started with Rails.
-                %p
+                %h2 = "The Weather Outside In #{@weather.json['current_observation']['display_location']['full']}"
+                %table
+                  %td Temperature
+                  %td
+                    = "#{@weather.json['current_observation']['temp_f']}"
+                -#%p
+                  # TODO add weather underground logo
                   %a{href: "#"} Watch Episode
                   %span.duration (7 minutes)
             %tr

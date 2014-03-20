@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
+  belongs_to :weather
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :weather
   before_create :set_forecast_schedule
+  #before_save {self.email.downcase!}
   after_create :send_sign_up_email
   after_create :schedule_forecast_email
 

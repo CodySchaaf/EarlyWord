@@ -10,7 +10,7 @@ class Weather < ActiveRecord::Base
 	end
 
 	def self.get_weather(new_weather)
-		stored_weather = Weather.find_by_zip_code new_weather['zip_code']
+		stored_weather = Weather.find_by_zip_code new_weather.zip_code
 
 		stored_weather ? stored_weather.update_json :
 				Weather.create_new(new_weather)
@@ -28,7 +28,7 @@ class Weather < ActiveRecord::Base
 	private
 
 		def self.create_new(new_weather)
-			self.create({ zip_code: new_weather['zip_code'], json: self.get_current_weather(new_weather['zip_code']) })
+			self.create({ zip_code: new_weather.zip_code, json: self.get_current_weather(new_weather.zip_code) })
 		end
 
 		def self.get_current_weather(zip_code)

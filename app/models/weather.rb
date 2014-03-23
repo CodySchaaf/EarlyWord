@@ -12,12 +12,11 @@ class Weather < ActiveRecord::Base
 	def self.get_weather(new_weather)
 		stored_weather = Weather.find_by_zip_code new_weather.zip_code
 
-		stored_weather ? stored_weather.update_json :
-				Weather.create_new(new_weather)
+		stored_weather ? stored_weather.update_json : Weather.create_new(new_weather)
 	end
 
 	def update_json
-		update_attribute(:json, Weather.get_current_weather(zip_code)) unless self.current?
+		self.update_attributes json: Weather.get_current_weather(zip_code) unless current?
 		self
 	end
 
@@ -32,12 +31,17 @@ class Weather < ActiveRecord::Base
 		end
 
 		def self.get_current_weather(zip_code)
-			response = Typhoeus.get "http://api.wunderground.com/api/#{ENV['WUNDER_GROUND_KEY']}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true
-			if ENV['RAILS_ENV'] == 'development' && response.response_code.to_s == '504'
-				logger.debug('And Error Occurred with wunderground, using lame data.')
+			if ENV['RAILS_ENV'] == 'test'
+				puts 'We are testing, making no call to wunderground. Using preloaded data instead.'
 				JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
 			else
-				JSON.parse response.body
+				response = Typhoeus.get "http://api.wunderground.com/api/#{ENV['WUNDER_GROUND_KEY']}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true
+				if ENV['RAILS_ENV'] == 'development' && response.response_code.to_s == '504'
+					logger.debug('And Error Occurred with wunderground, using lame data.')
+					JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
+				else
+					JSON.parse response.body
+				end
 			end
 		end
 

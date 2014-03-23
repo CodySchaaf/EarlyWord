@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'should_not/rspec'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
@@ -51,7 +52,7 @@ Spork.prefork do
 		config.before(:suite) do
 			begin
 				DatabaseCleaner.start
-				FactoryGirl.lint
+				#FactoryGirl.lint
 			ensure
 				DatabaseCleaner.clean
 			end

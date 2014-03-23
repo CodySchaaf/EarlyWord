@@ -88,6 +88,9 @@ group :development, :test do
 	gem 'spork-rails'
 	gem 'guard-spork'
 	gem 'childprocess'
+	gem 'should_not'
+	gem 'fuubar'
+	# gem 'timecop'
 end
 
 group :test do

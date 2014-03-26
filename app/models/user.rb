@@ -27,6 +27,10 @@ class User < ActiveRecord::Base
 	  end
   end
 
+  def zip_code
+		Weather.find(zip_code_id).zip_code
+  end
+
 	private
 
 		def send_sign_up_email

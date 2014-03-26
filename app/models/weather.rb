@@ -3,6 +3,7 @@ class Weather < ActiveRecord::Base
 	serialize :json, JSON
 
 	validates :zip_code, length: { is: 5 }, presence: true, format: {with: /\d{5}/}
+	#validate :json_valid?
 	has_many :users
 
 	def current?
@@ -10,9 +11,13 @@ class Weather < ActiveRecord::Base
 	end
 
 	def self.get_weather(new_weather)
-		stored_weather = Weather.find_by_zip_code new_weather.zip_code
+		stored_weather = Weather.find_by_zip_code(new_weather.zip_code)
 
-		stored_weather ? stored_weather.update_json : Weather.create_new(new_weather)
+		weather = stored_weather ? stored_weather.update_json : Weather.create_new(new_weather)
+
+		#weather.json_valid?
+
+		weather
 	end
 
 	def update_json
@@ -24,7 +29,18 @@ class Weather < ActiveRecord::Base
 	#
 	#end
 
+
+	def json_valid?
+		!self.not_found?
+	end
+
+	def not_found?
+		json['response']['error'] && json['response']['error']['description'][/No cities match your search query/]
+	end
+
 	private
+
+
 
 		def self.create_new(new_weather)
 			self.create({ zip_code: new_weather.zip_code, json: self.get_current_weather(new_weather.zip_code) })
@@ -40,6 +56,7 @@ class Weather < ActiveRecord::Base
 					logger.debug('And Error Occurred with wunderground, using lame data.')
 					JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
 				else
+					# response.json_valid?
 					JSON.parse response.body
 				end
 			end

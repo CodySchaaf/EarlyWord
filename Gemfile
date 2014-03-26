@@ -90,7 +90,6 @@ group :development, :test do
 	gem 'childprocess'
 	gem 'should_not'
 	gem 'fuubar'
-	# gem 'timecop'
 end
 
 group :test do

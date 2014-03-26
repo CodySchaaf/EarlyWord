@@ -40,7 +40,7 @@ describe RegistrationsController do
 				end
 
 				specify do
-					Weather.should_receive(:find_by_zip_code).and_return(weather)
+					expect(Weather).to receive(:find_by_zip_code).and_return(weather)
 					expect{ subject; weather.reload }.to change(weather, :updated_at)
 					expect{subject}.not_to change(Weather, :count).by(1)
 					expect{ subject; weather.reload }.to_not change(weather, :updated_at)

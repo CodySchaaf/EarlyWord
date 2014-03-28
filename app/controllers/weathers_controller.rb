@@ -34,6 +34,7 @@ class WeathersController < ApplicationController
 	protected
 
 		def check_zip_code
+			puts 'Checking zip Code'
 			unless Weather.find(params[:id]).json_valid?
 				flash[:alert] = 'We can\'t seem to find this zip_code in our records.'
 				redirect_to root_path
@@ -41,7 +42,13 @@ class WeathersController < ApplicationController
 		end
 
 		def has_zip_code?
-			redirect_to Weather.find_by_zip_code(current_user && current_user.zip_code || session[:zip_code]) if current_user && current_user.zip_code_id or session[:zip_code]
+			if preferred_zip_code
+				redirect_to Weather.find_by_zip_code(preferred_zip_code)
+			end
+		end
+
+		def preferred_zip_code
+			(current_user && current_user.zip_code) || session[:zip_code]
 		end
 
 	private

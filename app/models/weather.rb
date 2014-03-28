@@ -15,8 +15,6 @@ class Weather < ActiveRecord::Base
 
 		weather = stored_weather ? stored_weather.update_json : Weather.create_new(new_weather)
 
-		#weather.json_valid?
-
 		weather
 	end
 
@@ -48,7 +46,7 @@ class Weather < ActiveRecord::Base
 
 		def self.get_current_weather(zip_code)
 			if ENV['RAILS_ENV'] == 'test'
-				puts 'We are testing, making no call to wunderground. Using preloaded data instead.'
+				logger.debug 'We are testing, making no call to wunderground. Using preloaded data instead.'
 				JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
 			else
 				response = Typhoeus.get "http://api.wunderground.com/api/#{ENV['WUNDER_GROUND_KEY']}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true

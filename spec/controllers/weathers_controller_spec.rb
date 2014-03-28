@@ -21,11 +21,8 @@ describe WeathersController do
 		end
 
 		describe 'changes weather count' do
-			puts "These are all the weathers 1: #{Weather.all.map(&:id)}"
 			specify {expect{subject}.to change(Weather, :count).by(1)}
-			puts "These are all the weathers 2: #{Weather.all.map(&:id)}"
 			specify {expect(response).to be_success}
-			puts "These are all the weathers 3: #{Weather.all.map(&:id)}"
 		end
 
 		describe 'when submitting an already used zip_code' do
@@ -34,12 +31,77 @@ describe WeathersController do
 				weather.update_column(:updated_at, 1.hour.ago)
 			end
 
-				it 'updates existing weather instead of making new one' do
-					expect(Weather).to receive(:find_by_zip_code).and_return(weather)
-					expect{ subject; weather.reload }.to change(weather, :updated_at)
-					expect{subject}.not_to change(Weather, :count).by(1)
-					expect{ subject; weather.reload }.to_not change(weather, :updated_at)
+			it 'updates existing weather instead of making new one' do
+				expect(Weather).to receive(:find_by_zip_code).and_return(weather)
+				expect{ subject; weather.reload }.to change(weather, :updated_at)
+				expect{subject}.not_to change(Weather, :count).by(1)
+				expect{ subject; weather.reload }.to_not change(weather, :updated_at)
+			end
+		end
+
+		describe 'when submitting to the show action' do
+			before do
+				subject
+				allow(Weather.last).to receive(:json_valid?) {true}
+				get :show, id: Weather.last
+			end
+
+			it 'responds successfully with an HTTP 200 status code' do
+				expect(response).to be_success
+				expect(response.status).to eq(200)
+			end
+
+			it 'renders the show page succesfully' do
+				expect(response).to render_template(:show)
+			end
+
+			it 'loads the weather into @weather' do
+				expect(assigns(:weather)).to eq(Weather.last)
+			end
+
+			it 'loads the current_weather into @current_observation' do
+				expect(assigns(:current_observation)).to be_a(Hash)
+			end
+		end
+	end
+
+	describe 'submitting to the show action with invalid zip_code' do
+		let(:params) { { weather: attributes_for(:zip_code, zip_code: 90000)} }
+		subject {post :create, params }
+		before do
+			allow(Weather).to receive(:get_current_weather).and_return(get_fake_weather)
+		end
+
+		it 'returns success' do
+			subject
+			expect(response).to be_redirect
+			expect(response).to redirect_to(Weather.first)
+		end
+		it 'creates a new weather entry' do
+			expect{subject}.to change(Weather,:count).by(1)
+		end
+		describe 'redirects to the home page' do
+			before {
+				subject
+				allow(Weather.last).to receive(:json_valid?) {false}
+				get :show, id: Weather.last
+			}
+			it 'loads the weather into @weather' do
+				expect(assigns(:weather)).to eq(Weather.last)
 				end
+			it 'loads the current_weather into @current_observation' do
+				expect(assigns(:current_observation)).to be(nil)
+			end
+			it 'responds with redirect and an HTTP 302 status code' do
+				expect(response).to be_redirect
+				expect(response.status).to eq(302)
+			end
+			it 'redirects to the home page' do
+				expect(response).to redirect_to(root_url)
+			end
+			it 'has error message' do
+				expect(flash[:alert]).to include('We can\'t seem to find this zip_code in our records.')
+			end
 		end
 	end
 

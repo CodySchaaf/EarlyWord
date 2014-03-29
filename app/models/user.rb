@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   before_create :set_forecast_schedule
-  #before_save {self.email.downcase!}
+  before_save { self.email.downcase! }
   after_create :send_sign_up_email
   after_create :schedule_forecast_email
 

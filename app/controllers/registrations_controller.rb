@@ -20,7 +20,7 @@ class RegistrationsController < Devise::RegistrationsController
 
 		session[:zip_code] = @weather.zip_code
 
-		params[:user][:zip_code_id] = @weather.id
+		params[:user][:weather_id] = @weather.id
 		super
 	end
 
@@ -47,7 +47,7 @@ class RegistrationsController < Devise::RegistrationsController
 		end
 
 		def update_sanitized_params
-			devise_parameter_sanitizer.for(:sign_up) << :zip_code_id
+			devise_parameter_sanitizer.for(:sign_up) << :weather_id
 		end
 
 	private

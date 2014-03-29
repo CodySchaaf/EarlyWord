@@ -155,9 +155,7 @@ describe WeathersController do
 	end
 
 	describe 'when forbidden attributes are posted' do
-		let!(:zip_code) do
-			attributes_for :zip_code
-		end
+		let(:zip_code) { attributes_for :zip_code }
 		subject{ post :create, weather: zip_code }
 
 		it 'will not be written to the database from user input' do

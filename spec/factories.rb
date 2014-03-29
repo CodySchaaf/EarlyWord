@@ -3,20 +3,22 @@ FactoryGirl.define do
 
 
 	factory :user do
+		association :weather
 		sequence(:name)  { |n| "Person #{n}" }
 		sequence(:email) { |n| "person_#{n}@example.com"}
 		password "foobaring"
 		password_confirmation "foobaring"
 
-		initialize_with { new(attributes) }
+		#initialize_with { new(attributes) }
 	end
 
-	factory :zip_code, class: Weather do
-		zip_code "94116"
+	factory :weather, aliases: [:zip_code] do
+		sequence(:zip_code, '10001') { |n| n}
+		json ''
 
-		factory :weather do
-			json JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
+		after :create do |user|
+			user.json = JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
 		end
-			initialize_with { new(attributes) }
+		#initialize_with { new(attributes) }
 	end
 end

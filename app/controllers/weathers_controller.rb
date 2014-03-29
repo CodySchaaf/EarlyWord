@@ -15,13 +15,7 @@ class WeathersController < ApplicationController
 		if signed_in?
 			current_user.update_attributes!(zip_code_id: @weather.id)
 		end
-
 		redirect_to @weather
-		#if @weather.json_valid?
-		#else
-		#	flash[:alert] = 'We can\'t seem to find this zip_code in our records.'
-		#	redirect_to :back
-		#end
 	end
 
 	def show
@@ -34,7 +28,6 @@ class WeathersController < ApplicationController
 	protected
 
 		def check_zip_code
-			puts 'Checking zip Code'
 			unless Weather.find(params[:id]).json_valid?
 				flash[:alert] = 'We can\'t seem to find this zip_code in our records.'
 				redirect_to root_path

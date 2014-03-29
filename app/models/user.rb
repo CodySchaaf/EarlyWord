@@ -21,14 +21,14 @@ class User < ActiveRecord::Base
 
   def schedule_forecast_email
 	  logger.debug('We are now scheduling the forecast job!')
-	  if self.zip_code_id && self.forecast_scheduled_at
+	  if self.weather_id && self.forecast_scheduled_at
 		  Delayed::Job.enqueue(ForecastJob.new(self), :run_at => self.forecast_scheduled_at)
 		  logger.debug('We have scheduled the forecast job!')
 	  end
   end
 
   def zip_code
-		Weather.find(zip_code_id).zip_code
+		Weather.find(weather_id).zip_code
   end
 
 	private

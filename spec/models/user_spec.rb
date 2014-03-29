@@ -8,7 +8,7 @@ describe User do
 
 	it { should respond_to(:name) }
 	it { should respond_to(:email) }
-	it { should respond_to(:zip_code_id) }
+	it { should respond_to(:weather_id) }
 	it { should respond_to(:password) }
 
 	it { should be_valid }

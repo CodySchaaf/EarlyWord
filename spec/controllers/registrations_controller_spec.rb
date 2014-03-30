@@ -136,7 +136,6 @@ describe RegistrationsController do
 						include(weather_id: Weather.last.id)
 				)
 			end
-
 		end
 	end
 end

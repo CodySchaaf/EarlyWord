@@ -20,10 +20,10 @@ class User < ActiveRecord::Base
   end
 
   def schedule_forecast_email
-	  logger.debug('We are now scheduling the forecast job!')
+	  logger.debug("We are now scheduling the forecast job for user: #{id}")
 	  if self.weather_id && self.forecast_scheduled_at
 		  Delayed::Job.enqueue(ForecastJob.new(self), :run_at => self.forecast_scheduled_at)
-		  logger.debug('We have scheduled the forecast job!')
+		  logger.debug("We have scheduled the forecast job for user: #{id}")
 	  end
   end
 

@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe WeathersController do
+	before { allow(Weather).to receive(:get_current_weather).and_return(get_fake_found_weather) }
+
 	describe 'submitting to the new action' do
 		before { get :new }
 
@@ -108,7 +110,7 @@ describe WeathersController do
 		let(:params) { { weather: attributes_for(:zip_code, zip_code: 90000)} }
 		subject {post :create, params }
 		before do
-			allow(Weather).to receive(:get_current_weather).and_return(get_fake_weather)
+			allow(Weather).to receive(:get_current_weather).and_return(get_fake_not_found_weather)
 		end
 
 		it 'returns success' do

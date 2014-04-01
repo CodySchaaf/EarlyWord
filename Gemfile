@@ -98,4 +98,5 @@ group :test do
 	gem 'capybara'
 	gem 'growl'
 	gem 'factory_girl_rails'
+	gem 'timecop'
 end

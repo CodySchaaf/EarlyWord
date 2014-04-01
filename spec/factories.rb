@@ -19,6 +19,12 @@ FactoryGirl.define do
 		after :create do |user|
 			user.json = JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
 		end
+
+		trait :not_found do
+			after :create do |user|
+				user.json = JSON.parse(File.read(Rails.root.join('json_sample_90000.json')).chomp)
+			end
+		end
 		#initialize_with { new(attributes) }
 	end
 end

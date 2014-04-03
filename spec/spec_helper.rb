@@ -48,6 +48,9 @@ Spork.prefork do
 		# the seed, which is printed after each run.
 		#     --seed 1234
 		config.order = "random"
+		config.before(:each) do
+			allow(Weather).to receive(:get_current_weather).and_return(get_fake_found_weather)
+		end
 
 		config.before(:suite) do
 			begin

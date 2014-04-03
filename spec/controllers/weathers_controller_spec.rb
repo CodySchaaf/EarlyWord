@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe WeathersController do
-	before { allow(Weather).to receive(:get_current_weather).and_return(get_fake_found_weather) }
 
 	describe 'submitting to the new action' do
 		before { get :new }

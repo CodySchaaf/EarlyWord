@@ -29,3 +29,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Thanks CODESHIP!
+
+https://www.codeship.io/projects/29e1bbe0-9d10-0131-853d-5efbb97d7440/status

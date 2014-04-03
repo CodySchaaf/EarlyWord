@@ -82,6 +82,7 @@ describe User do
 			end
 
 			it 'sends sign_up email' do
+				Delayed::Worker.new.work_off
 				expect(ActionMailer::Base.deliveries.last.to).to eq([user.email])
 			end
 		end

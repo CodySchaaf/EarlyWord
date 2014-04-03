@@ -30,7 +30,7 @@ EarlyBird::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025, :enable_starttls_auto => true }
-  Delayed::Worker.destroy_failed_jobs = false
+  #Delayed::Worker.destroy_failed_jobs = false
   #Delayed::Worker.sleep_delay = 60
   #Delayed::Worker.max_attempts = 3
   #Delayed::Worker.max_run_time = 5.minutes

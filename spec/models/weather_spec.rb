@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Weather do
 	let(:weather) { build :weather }
+	before(:all) {Timecop.freeze}
+	after(:all) {Timecop.return}
 	before {allow(Weather).to receive(:get_current_weather).with(kind_of(Numeric)) {get_fake_found_weather}}
 
 	subject{ weather }
@@ -56,11 +58,9 @@ describe Weather do
 
 			describe 'after update' do
 				before do
-					Timecop.freeze
 					weather.update_json
 					weather.reload
 				end
-				after {Timecop.return}
 
 				it { should be_current }
 				its(:updated_at) { should eq Time.current }
@@ -77,7 +77,7 @@ describe Weather do
 
 			describe 'less than an hour later' do
 				specify { expect{subject}.not_to change(Weather,:count) }
-				specify { expect{subject}.not_to change(old_weather, :updated_at)}
+				specify { expect{subject}.not_to change(old_weather, :updated_at) }
 			end
 
 			specify 'more than an hour ago' do
@@ -92,7 +92,7 @@ describe Weather do
 			subject { Weather.get_weather(new_weather); old_weather.reload }
 
 			specify { expect{subject}.to change(Weather,:count) }
-			specify { expect{subject}.not_to change(old_weather, :updated_at)}
+			specify { expect{subject}.not_to change(old_weather, :updated_at) }
 		end
 	end
 

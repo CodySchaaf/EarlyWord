@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
 
 		def send_sign_up_email
 			logger.debug('We are now doing send_sign_up_email.')
-			ForecastMailer.send_sign_up_email(self).deliver!
+			ForecastMailer.delay.send_sign_up_email(self).deliver!
 		end
 
     def set_forecast_schedule

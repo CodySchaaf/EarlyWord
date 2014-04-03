@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
+  belongs_to :weather
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :weather
   before_create :set_forecast_schedule
+  before_save { self.email.downcase! }
   after_create :send_sign_up_email
   after_create :schedule_forecast_email
 
@@ -19,18 +20,22 @@ class User < ActiveRecord::Base
   end
 
   def schedule_forecast_email
-	  logger.debug('We are now scheduling the forecast job!')
-	  if self.zip_code_id && self.forecast_scheduled_at
+	  logger.debug("We are now scheduling the forecast job for user: #{id}")
+	  if self.weather_id && self.forecast_scheduled_at
 		  Delayed::Job.enqueue(ForecastJob.new(self), :run_at => self.forecast_scheduled_at)
-		  logger.debug('We have scheduled the forecast job!')
+		  logger.debug("We have scheduled the forecast job for user: #{id}")
 	  end
+  end
+
+  def zip_code
+		Weather.find(weather_id).zip_code
   end
 
 	private
 
 		def send_sign_up_email
 			logger.debug('We are now doing send_sign_up_email.')
-			Forecast.send_sign_up_email(self).deliver!
+			ForecastMailer.send_sign_up_email(self).deliver!
 		end
 
     def set_forecast_schedule

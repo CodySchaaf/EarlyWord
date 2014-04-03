@@ -63,7 +63,9 @@ describe Weather do
 				end
 
 				it { should be_current }
-				its(:updated_at) { should eq Time.current }
+					its('updated_at.to_i') do
+						should eq Time.current.to_i
+				end
 			end
 		end
 	end
@@ -77,7 +79,7 @@ describe Weather do
 
 			describe 'less than an hour later' do
 				specify { expect{subject}.not_to change(Weather,:count) }
-				specify { expect{subject}.not_to change(old_weather, :updated_at) }
+				specify { expect{subject}.not_to change{old_weather.updated_at.to_i} }
 			end
 
 			specify 'more than an hour ago' do
@@ -92,7 +94,7 @@ describe Weather do
 			subject { Weather.get_weather(new_weather); old_weather.reload }
 
 			specify { expect{subject}.to change(Weather,:count) }
-			specify { expect{subject}.not_to change(old_weather, :updated_at) }
+			specify { expect{subject}.not_to change{old_weather.updated_at.to_i} }
 		end
 	end
 

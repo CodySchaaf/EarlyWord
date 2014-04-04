@@ -25,11 +25,11 @@ EarlyBird::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
-  config.action_mailer.default_url_options = { :host => 'localhost', port: 3000 }
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025, :enable_starttls_auto => true }
+  #config.assets.debug = true
+  #config.action_mailer.default_url_options = { :host => 'localhost', port: 3000 }
+  #config.action_mailer.raise_delivery_errors = true
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025, :enable_starttls_auto => true }
   #Delayed::Worker.destroy_failed_jobs = false
   #Delayed::Worker.sleep_delay = 60
   #Delayed::Worker.max_attempts = 3
@@ -37,4 +37,15 @@ EarlyBird::Application.configure do
   #Delayed::Worker.read_ahead = 10
   #Delayed::Worker.default_queue_name = 'default'
   #Delayed::Worker.delay_jobs = !Rails.env.test?
+
+  config.action_mailer.smtp_settings =  {
+    :enable_starttls_auto => true,
+    :address        => 'smtp.gmail.com',
+    :port           => 587,                                   # default port for gmail.
+    :domain         => 'earlybird.heroku.com',
+    :authentication => :login,
+    :content_type   => "text/html",
+    :user_name      => 'codyjschaaf@gmail.com',
+    :password       => 'password'
+  }
 end

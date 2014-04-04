@@ -2,7 +2,7 @@
 
 Thanks CODESHIP!
 
-{<img alt="Status?branch=master" src="https://www.codeship.io/projects/29e1bbe0-9d10-0131-853d-5efbb97d7440/status?branch=master" />}[https://www.codeship.io/projects/17877]
+[ ![Codeship Status for CodySchaaf/EarlyWord](https://www.codeship.io/projects/29e1bbe0-9d10-0131-853d-5efbb97d7440/status?branch=master)](https://www.codeship.io/projects/17877)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -31,5 +31,3 @@ Things you may want to cover:
 
 * Simply run gem install mailcatcher then mailcatcher to get started.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

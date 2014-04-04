@@ -37,7 +37,7 @@ class WeathersController < ApplicationController
 		def has_zip_code?
 			if preferred_zip_code
 				weather = Weather.find_by_zip_code(preferred_zip_code)
-				redirect_to weather if weather
+				redirect_to weather if weather && weather.json_valid?
 			end
 		end
 

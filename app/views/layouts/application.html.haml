@@ -7,12 +7,14 @@
     = csrf_meta_tags
     = render 'layouts/shim'
   %body
-    = render 'layouts/header'
+    %header
+      = render 'layouts/header'
     .container-fluid
       #wrapper
-        .row.col-xs-push-2.col-xs-8.box-shadow#main
-          = render 'layouts/flash_messages'
-          = yield
-          .push
+        %main{role: 'main'}
+          .row.col-xs-push-2.col-xs-8.box-shadow#main
+            = render 'layouts/flash_messages'
+            = yield
+            .push
         = render 'layouts/footer'
         = debug(params) if Rails.env.development?

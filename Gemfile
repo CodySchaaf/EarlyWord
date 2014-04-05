@@ -72,7 +72,18 @@ gem 'daemons'
 # New relic gem for pinging
 gem 'newrelic_rpm'
 
+# For use when upgrading to rails 4.1
+# gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+# run rake heroku:secrets RAILS_ENV=production to use
+# May need this, not sure yet:
+# AWS::S3::Base.establish_connection!(
+# 		:access_key_id     => ENV['S3_KEY'],
+# 		:secret_access_key => ENV['S3_SECRET']
+# )
+
 group :development do
+	# sprockets better errors in case i decide to use it later
+	gem 'sprockets_better_errors'
 	gem 'better_errors'
 	gem 'binding_of_caller'
 	gem 'quiet_assets'

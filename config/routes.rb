@@ -1,10 +1,10 @@
 EarlyWord::Application.routes.draw do
-  #devise_for :users, except: [:registrations]
-  devise_for :users, :controllers => { :registrations => 'registrations' }
+	#devise_for :users, except: [:registrations]
+	devise_for :users, :controllers => { :registrations => 'registrations' }
 
-  root 'weathers#new'
+	root 'weathers#new'
 
-  resources :weathers, only: [:new, :create, :show]
+	resources :weathers, only: [:new, :create, :show]
 
 
 

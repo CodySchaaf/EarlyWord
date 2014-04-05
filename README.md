@@ -1,8 +1,8 @@
 == README
 
-Thanks CODESHIP!
+Thanks CODESHIP! and WUNDERGROUND!
 
-[ ![Codeship Status for CodySchaaf/EarlyWord](https://www.codeship.io/projects/29e1bbe0-9d10-0131-853d-5efbb97d7440/status?branch=master)](https://www.codeship.io/projects/17877)
+[ ![Codeship Status for CodySchaaf/EarlyWord](https://www.codeship.io/projects/29e1bbe0-9d10-0131-853d-5efbb97d7440/status?branch=master)](https://www.codeship.io/projects/17877)  ![WUNDERGROUND Logo](http://icons.wxug.com/logos/images/wundergroundLogo_4c.jpg)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

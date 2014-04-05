@@ -9,7 +9,7 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-EarlyBird::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+EarlyWord::Application.config.secret_key_base = ENV['SECRET_TOKEN']
 #require 'securerandom'
 #
 #def secure_token
@@ -25,4 +25,4 @@ EarlyBird::Application.config.secret_key_base = ENV['SECRET_TOKEN']
 #	end
 #end
 #
-#EarlyBird::Application.config.secret_key_base = secure_token
+#EarlyWord::Application.config.secret_key_base = secure_token

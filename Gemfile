@@ -68,6 +68,10 @@ gem 'delayed_job_active_record'
 
 # Deamons used to run delayed_jobs
 gem 'daemons'
+
+# New relic gem for pinging
+gem 'newrelic_rpm'
+
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'

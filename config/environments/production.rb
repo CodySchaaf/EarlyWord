@@ -1,4 +1,4 @@
-EarlyBird::Application.configure do
+EarlyWord::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -82,13 +82,13 @@ EarlyBird::Application.configure do
   #TODO fill out and secretify
   config.action_mailer.smtp_settings =  {
 		  :enable_starttls_auto => true,
-		  :address        => 'smtp.gmail.com',
+		  :address        => 'smtp.mandrillapp.com',
 		  :port           => 587,                                   # default port for gmail.
-		  :domain         => 'earlybird.heroku.com',
+		  :domain         => 'EarlyWord.heroku.com',
 		  :authentication => :login,
-		  :content_type   => "text/html",
-		  :user_name      => 'codyjschaaf@gmail.com',
-		  :password       => 'password'
+		  :content_type   => 'text/html',
+		  :user_name      => ENV['MANDRILL_USERNAME'],
+		  :password       => ENV['MANDRILL_APIKEY']
   }
   #config.action_mailer.default_url_options = { :host => 'localhost', port: 3000 }
   #config.action_mailer.raise_delivery_errors = true

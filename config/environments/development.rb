@@ -1,4 +1,4 @@
-EarlyBird::Application.configure do
+EarlyWord::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -14,7 +14,7 @@ EarlyBird::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -30,7 +30,7 @@ EarlyBird::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025, :enable_starttls_auto => true }
-  #Delayed::Worker.destroy_failed_jobs = false
+  Delayed::Worker.destroy_failed_jobs = false
   #Delayed::Worker.sleep_delay = 60
   #Delayed::Worker.max_attempts = 3
   #Delayed::Worker.max_run_time = 5.minutes

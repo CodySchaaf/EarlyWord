@@ -1,4 +1,4 @@
-EarlyBird::Application.routes.draw do
+EarlyWord::Application.routes.draw do
   #devise_for :users, except: [:registrations]
   devise_for :users, :controllers => { :registrations => 'registrations' }
 

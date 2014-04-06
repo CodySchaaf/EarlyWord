@@ -38,7 +38,7 @@ class Weather < ActiveRecord::Base
 
 	def self.get_current_weather(zip_code)
 		raise 'Big Problem Should not be in here during test' if ENV['RAILS_ENV'] == 'test'
-		response = Typhoeus.get "http://api.wunderground.com/api/#{ENV['WUNDERGROUND_KEY']}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true
+		response = Typhoeus.get "http://api.wunderground.com/api/#{Rails.application.secrets.wunderground_key}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true
 		if ENV['RAILS_ENV'] == 'development' && response.response_code.to_s == '504'
 			raise 'Big Problem Should unless it is development' if ENV['RAILS_ENV'] == 'production'
 			logger.debug('An Error Occurred with wunderground, using lame data.')

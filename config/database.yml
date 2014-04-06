@@ -14,13 +14,24 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: early_word_development
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-#  username: cody
-  password:
+
+development:
+  <<: *default
+  database: early_word_development
+# The specified database role being used to connect to postgres.
+  # To create additional roles in postgres see `$ createuser --help`.
+  # When left blank, postgres will use the default role. This is
+  # the same name as the operating system user that initialized the database.
+  #username: rails_new_4_1
+
+  # The password associated with the postgres role (username).
+  #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -44,15 +55,16 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: early_word_test
-  pool: 5
-  password:
 
+# Do not keep production credentials in the repository,
+# instead read the configuration from the environment.
+#
+# Example:
+#   postgres://myuser:mypass@localhost/somedatabase
+#
 production:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: early_word_production
-  pool: 5
-  password:
+  url: <%= ENV["DATABASE_URL"] %>

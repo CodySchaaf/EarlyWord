@@ -356,6 +356,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord (= 4.1.0.rc1)
   bcrypt
   better_errors
   binding_of_caller
@@ -385,6 +386,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.1.0.rc1)
   rails_12factor
+  railties (= 4.1.0.rc1)
   roadie
   rspec-rails
   sass (= 3.2.13)

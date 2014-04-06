@@ -1,10 +1,24 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+# Pick the frameworks you want:
+require 'active_model/railtie'
+require 'active_record/railtie'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'action_view/railtie'
+require 'sprockets/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+if File.exists?(File.expand_path('../application.yml', __FILE__))
+	config = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+	config.merge! config.fetch(Rails.env, {})
+	config.each do |key, value|
+		ENV[key] ||= value.to_s unless value.kind_of? Hash
+	end
+end
 
 module EarlyWord
   class Application < Rails::Application
@@ -19,6 +33,5 @@ module EarlyWord
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-	  config.i18n.enforce_available_locales = true
   end
 end

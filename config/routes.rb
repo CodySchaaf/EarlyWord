@@ -6,9 +6,9 @@ EarlyWord::Application.routes.draw do
 
 	resources :weathers, only: [:new, :create, :show]
 
-	# if Rails.env.development?
-	# 	mount ForecastMailer::Preview => 'mail_view'
-	# end
+	if Rails.env.development?
+		mount ForecastMailer::Preview => 'mail_view'
+	end
 
 
 end

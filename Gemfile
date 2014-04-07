@@ -82,7 +82,7 @@ gem 'newrelic_rpm'
 # )
 
 # Email viewer
-# gem 'mail_view'
+gem 'mail_view'
 
 group :development do
 	# sprockets better errors in case i decide to use it later

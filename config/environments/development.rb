@@ -32,7 +32,7 @@ EarlyWord::Application.configure do
   config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025, :enable_starttls_auto => true }
   Delayed::Worker.destroy_failed_jobs = false
   #Delayed::Worker.sleep_delay = 60
-  #Delayed::Worker.max_attempts = 3
+  Delayed::Worker.max_attempts = 10
   #Delayed::Worker.max_run_time = 5.minutes
   #Delayed::Worker.read_ahead = 10
   #Delayed::Worker.default_queue_name = 'default'

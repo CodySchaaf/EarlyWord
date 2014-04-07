@@ -61,7 +61,7 @@ describe User do
 			end
 
 			it 'sets the forecast_scheduled_at' do
-				expect(user.forecast_scheduled_at).to eq(Time.parse('02:00:00 AM'))
+				expect(user.forecast_scheduled_at).to eq(Time.zone.parse('06:00:00 AM'))
 			end
 		end
 
@@ -91,7 +91,7 @@ describe User do
 			it 'sets the users forecast_scheduled_at' do
 				expect {user.update_forecast_schedule}.to change(
 						user, :forecast_scheduled_at
-				     ).from(Time.parse('02:00:00 AM')).to(Time.parse('02:00:00 AM').tomorrow)
+				     ).from(Time.zone.parse('06:00:00 AM')).to(Time.zone.parse('06:00:00 AM').tomorrow)
 			end
 		end
 	end

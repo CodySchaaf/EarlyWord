@@ -27,9 +27,9 @@ describe ForecastJob do
 			}.to change {
 				Delayed::Job.last.run_at
 			}.from(
-					     Time.now.midnight.since(2.hours)
+					     Time.zone.now.midnight.since(6.hours)
 			     ).to(
-					     Time.now.tomorrow.midnight.since(2.hours)
+					     Time.zone.now.tomorrow.midnight.since(6.hours)
 			     )
 		end
 

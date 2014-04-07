@@ -47,7 +47,7 @@ class RegistrationsController < Devise::RegistrationsController
 		end
 
 		def update_sanitized_params
-			devise_parameter_sanitizer.for(:sign_up) << :weather_id
+			devise_parameter_sanitizer.for(:sign_up).push(:weather_id, :name)
 		end
 
 	private

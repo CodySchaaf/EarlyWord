@@ -39,7 +39,10 @@ class User < ActiveRecord::Base
 		end
 
     def set_forecast_schedule
-			self.forecast_scheduled_at = Time.parse('02:00:00 AM')
+	    #TODO update this and move to correct place
+	    #Do not do this!
+	    Time.zone = 'Pacific Time (US & Canada)'
+			self.forecast_scheduled_at = Time.current.midnight.since(6.hours)
     end
 
 end

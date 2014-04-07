@@ -72,7 +72,7 @@ gem 'daemons'
 # New relic gem for pinging
 gem 'newrelic_rpm'
 
-# For use when upgrading to rails 4.1
+# For use if you dont want to add your environment variables manually to heroku everytime
 # gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 # run rake heroku:secrets RAILS_ENV=production to use
 # May need this, not sure yet:
@@ -80,6 +80,9 @@ gem 'newrelic_rpm'
 # 		:access_key_id     => ENV['S3_KEY'],
 # 		:secret_access_key => ENV['S3_SECRET']
 # )
+
+# Email viewer
+# gem 'mail_view'
 
 group :development do
 	# sprockets better errors in case i decide to use it later

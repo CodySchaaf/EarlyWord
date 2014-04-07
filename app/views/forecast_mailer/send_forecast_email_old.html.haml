@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title = "Forecast For #{@user.name} (#{@weather.zip_code})"
+  %body
+    %table#background{border: "0", cellpadding: "0", cellspacing: "0", width: "100%"}
+      %tr
+        %td{align: "center", valign: "top"}
+          %table#main{border: "0", cellpadding: "0", cellspacing: "20", width: "650"}
+            %tr
+              %td#header{colspan: "2"}
+                %a{href: "http://railscasts.com/"}
+                  %img{alt: "RailsCasts", height: "56", src: "http://railscasts.com/images/railscasts_logo.png", width: "423"}/
+            %tr
+              %td.divider{bgcolor: "#555555", colspan: "2", height: "2"}
+            %tr.weather
+              %td
+                %a{href: "#"}
+                  %img{alt: "#310 Getting Started with Rails", height: "125", src: "http://railscasts.com/assets/episodes/stills/310-getting-started-with-rails.png", width: "200"}/
+              %td{valign: "top"}
+                %h2 = "The Weather Outside In #{@weather.json['current_observation']['display_location']['full']}"
+                %table
+                  %td Temperature
+                  %td
+                    = "#{@weather.json['current_observation']['temp_f']}"
+                -#%p
+                  # TODO add weather underground logo
+                  %a{href: "#"} Watch Episode
+                  %span.duration (7 minutes)
+            %tr
+              %td.divider{bgcolor: "#555555", colspan: "2", height: "2"}
+            %tr
+              %td#footer{align: "center", colspan: "2"}
+                %p
+                  %a{href: "#"} Unsubscribe
+                  if you do not wish to receive these emails in the future.
+                %p ©2011 RailsCasts

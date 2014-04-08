@@ -196,8 +196,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mail_view (2.0.4)
-      tilt
     meta_request (0.2.9)
       callsite
       rack-contrib
@@ -381,7 +379,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
-  mail_view
   meta_request
   newrelic_rpm
   pg

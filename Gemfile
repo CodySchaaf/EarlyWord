@@ -87,9 +87,6 @@ gem 'newrelic_rpm'
 # 		:secret_key_base => ENV['SECRET_TOKEN'],
 # )
 
-# Email viewer
-gem 'mail_view'
-
 group :development do
 	# used as preloader
 	gem 'spring'
@@ -116,6 +113,8 @@ group :development, :test do
 	gem 'childprocess'
 	gem 'should_not'
 	gem 'fuubar'
+	# Needs to be in here now for email testing in rails 4.1
+	gem 'factory_girl_rails'
 end
 
 group :test do
@@ -123,6 +122,5 @@ group :test do
 	gem 'selenium-webdriver'
 	gem 'capybara'
 	gem 'growl'
-	gem 'factory_girl_rails'
 	gem 'timecop'
 end

@@ -1,11 +1,33 @@
-= "Forecast For #{@user.name} (#{@weather.zip_code})"
+Forecast For #{@user.name} (#{@weather.zip_code})
 
 = '---------------------------------------------'
 
-= "The Weather Outside In #{@weather.json['current_observation']['display_location']['full']}"
+Good Morning, #{@user.name}
 
-Temperature:
-
-= "#{@weather.json['current_observation']['temp_f']}"
+The Weather Outside In #{@weather.json['current_observation']['display_location']['full']} today: #{"#{@weather.json['current_observation']['temp_f']} Degrees F"}
 
 = '---------------------------------------------'
+
+- @weather.json['forecast']['txt_forecast']['forecastday'].first(4).each_with_index do |forecast,index|
+
+  #{forecast['title']}:  #{forecast['fcttext']}
+
+  = '            ..............                  '
+
+= '---------------------------------------------'
+
+Here is Today's Hourly Weather:
+
+- @weather.json['hourly_forecast'].each_with_index do |forecast,index|
+  #{forecast['FCTTIME']['civil']}: #{raw("#{forecast['temp']['english']} &deg; F")} | Feels Like: #{"#{forecast['feelslike']['english']} Degrees F"}
+  = '            ..............                  '
+
+= '---------------------------------------------'
+Contact Info:
+
+Phone:
+408.341.0600
+
+Email:
+
+word.early@gmail.com

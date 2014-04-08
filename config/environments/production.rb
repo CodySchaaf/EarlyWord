@@ -87,8 +87,8 @@ EarlyWord::Application.configure do
 		  :domain         => 'EarlyWord.heroku.com',
 		  :authentication => :login,
 		  :content_type   => 'text/html',
-		  :user_name      => ENV['MANDRILL_USERNAME'],
-		  :password       => ENV['MANDRILL_APIKEY']
+		  :user_name      => Rails.application.secrets.mandrill_username,
+		  :password       => Rails.application.secrets.mandrill_apikey
   }
   #config.action_mailer.default_url_options = { :host => 'localhost', port: 3000 }
   #config.action_mailer.raise_delivery_errors = true

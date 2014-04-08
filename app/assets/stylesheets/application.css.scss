@@ -43,19 +43,16 @@ div#main {
   min-height: 100%;
   height: auto;
   margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
-//  padding-top: 60px;
   padding: 0 0 60px;
 }
 
 html, body {
-//  overflow-y: scroll;
   height: 100%;
   width: 100%
 }
 
 body {
   background: $gray-light !important;
-//  padding-top: 60px;
 }
 
 section {
@@ -101,29 +98,45 @@ p {
   line-height: 1.7em;
 }
 
-/* footer */
+/* Header */
 
-//.footer, .push {
-//  height: 142px; /* .push must be the same height as .footer */
-//}
+#nav-home {
+  margin-right: 0px;
+}
 
+li#welcome-message {
+  margin-top: -15px;
+  margin-left: -2em;
+}
+
+div#welcome-message {
+  width: 100%;
+  padding-left: auto;
+  padding-right: auto;
+  p {
+    margin-top: -1px;
+    position: absolute;
+    display: inline;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+  }
+}
+
+/* Footer */
 
 footer {
-//  clear: both;
   padding: 0px 0 10px 0;
-//  display: inline-block;
   margin: auto;
   bottom: 80px;
   left: 0;
   position: absolute;
   right: 0;
   width: 95%;
-//  position: fixed;
-//  bottom: -100px;
-//  margin-top: 45px;
-//  padding-top: 5px;
-//  position: relative;
-//  top: 100px;
   height: 100px;
   border-top: 1px solid $grayMediumLight;
   color: $gray-light;
@@ -147,18 +160,12 @@ footer {
 }
 
 .debug_dump {
-//  position: fixed;
-//  bottom: 100px;
   margin: auto;
-//  display:inline-block;
   bottom: 10px;
   width: 90%;
   left: 0;
   position: absolute;
   right: 0;
   height: 150px;
-  //  clear: both;
-  //  float: left;
-  //  margin-top: 45px;
   @include box_sizing;
 }

@@ -67,4 +67,4 @@ test:
 production:
   <<: *default
   database: early_word_production
-  url: <%= ENV["DATABASE_URL"] %>
+#  url: <%= ENV["DATABASE_URL"] %>

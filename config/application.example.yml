@@ -9,3 +9,4 @@ DEVISE_SECRET_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 MANDRILL_USERNAME: xxxxxxxxxxx@xxxxxx.xxx
 MANDRILL_APIKEY: xxxxxxxxxxxxxxxxxxxxxx
 NEW_RELIC_LICENSE_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LOGENTRIES_LOGGER_KEY: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx

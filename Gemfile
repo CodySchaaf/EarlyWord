@@ -87,6 +87,12 @@ gem 'newrelic_rpm'
 # 		:secret_key_base => ENV['SECRET_TOKEN'],
 # )
 
+# For logentries error logger
+# After setting up use
+# level specific methods like 'info', 'warn', 'debug'.
+# Rails.logger.warn("Look at me, I'm a warning")
+gem 'le'
+
 group :development do
 	# used as preloader
 	gem 'spring'

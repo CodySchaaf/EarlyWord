@@ -58,7 +58,7 @@ describe Weather do
 
 			describe 'after update' do
 				before do
-					weather.update_json
+					weather.update_json!
 					weather.reload
 				end
 

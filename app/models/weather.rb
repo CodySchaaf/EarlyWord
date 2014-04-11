@@ -12,12 +12,12 @@ class Weather < ActiveRecord::Base
 	def self.get_weather(new_weather)
 		stored_weather = Weather.find_by_zip_code(new_weather.zip_code)
 
-		weather = stored_weather ? stored_weather.update_json : Weather.create_new(new_weather)
+		weather = stored_weather ? stored_weather.update_json! : Weather.create_new(new_weather)
 
 		weather
 	end
 
-	def update_json
+	def update_json!
 		self.update_attributes json: Weather.get_current_weather(zip_code) unless current?
 		self
 	end

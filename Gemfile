@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.1.0.rc2'
+gem 'rails', '~> 4.1.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'sass', '3.2.13'
 
@@ -65,7 +65,8 @@ gem 'simple_form'
 gem 'roadie'
 
 # Delayed jobs, used to schedule weekly news letter
-gem 'delayed_job_active_record'
+gem 'delayed_job_active_record', github: 'CodySchaaf/delayed_job_active_record'
+gem 'delayed_job', github: 'collectiveidea/delayed_job'
 
 # Deamons used to run delayed_jobs
 gem 'daemons'

@@ -13,6 +13,7 @@ class ForecastMailer < ActionMailer::Base
 		logger.debug('We are inside the send forecast_mailer email method!')
 	  @user = user
 		@weather = Weather.find(user.weather_id)
+		@weather.update_json
 		attachments.inline['sunny_weather.jpe'] = File.read('app/assets/images/sunny_weather.jpe')
 	  mail(
 			  to: @user.email,

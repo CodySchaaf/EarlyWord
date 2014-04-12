@@ -10,10 +10,10 @@
   - if signed_in?
     %p.navbar-text.hidden-xs.welcome-message.col-sm-7.col-md-8.col-lg-9 Welcome #{current_user.name}
   .collapse.navbar-collapse.navbar-header.navbar-right
-    %ul.nav.navbar-nav.navbar-left
+    %ul.nav.navbar-nav
       %li
         = link_to 'User Page', '#'
-    %ul.nav.navbar-nav.navbar-right.col-xs-offset-6
+    %ul.nav.navbar-nav.col-xs-offset-6
       %li.dropdown.user-dropdown
         = link_to "#",{ class: 'dropdown-toggle', 'data-toggle' => 'dropdown'} do
           User

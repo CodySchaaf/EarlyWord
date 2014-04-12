@@ -5,11 +5,11 @@ class ForecastPreview < ActionMailer::Preview
 		user = User.first || FactoryGirl.build(:user)
 
 		# Return a Mail::Message here (but don't deliver it!)
-		ForecastMailer.send_sign_up_email(user)
+		ForecastMailer.sign_up_email(user)
 	end
 
 	def send_forecast_email
 		user = User.first || FactoryGirl.build(:user)
-		ForecastMailer.send_forecast_email(user)
+		ForecastMailer.forecast_email(user)
 	end
 end

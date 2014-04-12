@@ -1,10 +1,10 @@
-require "spec_helper"
+require 'spec_helper'
 
 describe ForecastJob do
 	let(:weather) { create :weather }
 	let!(:user) { create :user, weather: weather }
 	before do
-		Delayed::Job.first.destroy #For deleting the email jobs since it isnt needed.
+		Delayed::Job.first.destroy #For deleting the email jobs since it isn't needed.
 		allow(Weather).to receive(:get_current_weather).and_return(get_fake_found_weather)
 		weather.update_attribute :json, get_fake_found_weather
 		allow(Weather).to receive(:find) { weather }
@@ -13,7 +13,7 @@ describe ForecastJob do
 	subject{ Delayed::Worker.new.work_off }
 	describe 'performing delayed job' do
 
-		it 'removes and addes a new job to the queue after removing old job' do
+		it 'removes and adds a new job to the queue after removing old job' do
 			expect(ActionMailer::Base.deliveries.count).to eq(0)
 			expect(Delayed::Job.count).to eq(1)
 			expect{subject}.to_not change(Delayed::Job, :count)
@@ -38,13 +38,13 @@ describe ForecastJob do
 		end
 
 		describe 'forecast email' do
-			before {subject}
-			it 'sends the email' do
-				expect(ActionMailer::Base.deliveries.last.to).to eq([user.email])
+			before do
+				allow(ForecastMailer).to receive(:forecast_email).and_call_original
+				subject
 			end
 
-			it 'creates a an email with a weather specific subject' do
-				expect(ActionMailer::Base.deliveries.last.subject).to eq('Good Morning, here is your daily forecast!')
+			it 'sends the email by calling send_forecast_email' do
+				expect(ForecastMailer).to have_received(:forecast_email).with(user)
 			end
 
 		end

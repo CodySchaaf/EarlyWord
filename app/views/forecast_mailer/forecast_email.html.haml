@@ -72,15 +72,16 @@
                         %a
                           %h5 Here is Today's Hourly Weather
                           %p Sub-head or something
-                      - last = (0...@weather.json['hourly_forecast'].size).to_a.reverse.find {|x| x%4 == 0}
+                      -#- last = (0...@weather.json['hourly_forecast'].size).to_a.reverse.find {|x| x%2 == 0}
                       - @weather.json['hourly_forecast'].each_with_index do |forecast,index|
-                        - if index%4 == 0
-                          %li{class: ('last' if index == last)}
+                        - if index%2 == 0
+                          %li{class: ('last' if last? forecast['FCTTIME']['civil'])}
                             %table
                               %tr
                                 %td.time #{forecast['FCTTIME']['civil']}:
                                 %td #{raw("#{forecast['temp']['english']} &deg; F")}
                                 %td Feels Like: #{raw("#{forecast['feelslike']['english']} &deg; F")}
+                        - break if last? forecast['FCTTIME']['civil']
                     / social & contact
                     %table.social{bgcolor: "", width: "100%"}
                       %tr

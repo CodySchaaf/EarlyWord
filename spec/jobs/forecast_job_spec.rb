@@ -39,12 +39,12 @@ describe ForecastJob do
 
 		describe 'forecast email' do
 			before do
-				allow(ForecastMailer).to receive(:send_forecast_email).and_call_original
+				allow(ForecastMailer).to receive(:forecast_email).and_call_original
 				subject
 			end
 
 			it 'sends the email by calling send_forecast_email' do
-				expect(ForecastMailer).to have_received(:send_forecast_email).with(user)
+				expect(ForecastMailer).to have_received(:forecast_email).with(user)
 			end
 
 		end

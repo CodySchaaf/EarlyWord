@@ -1,7 +1,7 @@
 class ForecastMailer < ActionMailer::Base
   default css: 'emails/email', from: 'word.early@gmail.com'
 
-  def send_sign_up_email(user)
+  def sign_up_email(user)
 	  @user = user
 	  @user = user
 	  mail( :to => @user.email,
@@ -9,7 +9,7 @@ class ForecastMailer < ActionMailer::Base
   end
 
 
-  def send_forecast_email(user)
+  def forecast_email(user)
 		logger.debug('We are inside the send forecast_mailer email method!')
 	  @user = user
 		@weather = Weather.find(user.weather_id)

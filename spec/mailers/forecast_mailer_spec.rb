@@ -10,16 +10,15 @@ describe ForecastMailer do
 		allow(Weather).to receive(:find) { weather }
 		ActionMailer::Base.deliveries.clear
 	end
-	subject{ ForecastMailer.send_forecast_email(user) }
+	subject{ ForecastMailer.forecast_email(user) }
 
 	describe 'forecast email' do
-		before {subject}
 		it 'sends the email' do
-			expect(ActionMailer::Base.deliveries.last.to).to eq([user.email])
+			expect(subject.to).to eq([user.email])
 		end
 
 		it 'creates a an email with a weather specific subject' do
-			expect(ActionMailer::Base.deliveries.last.subject).to eq('Good Morning, here is your daily forecast!')
+			expect(subject.subject).to eq('Good Morning, here is your daily forecast!')
 		end
 
 	end

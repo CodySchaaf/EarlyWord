@@ -1,19 +1,15 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
- *= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
- *= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
- *= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
- *= require_self
- *= require_tree .
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*= require_self
+*= require_tree .
+*/
 @import 'bootstrap';
 
 /* mixins, variables, etc. */

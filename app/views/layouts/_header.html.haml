@@ -1,40 +1,36 @@
-%nav.navbar.navbar-inverse.navbar-fixed-top{role: 'navigation'}
-  .container
-    .navbar-header
-      %button.navbar-toggle{ type: 'button', 'data-toggle' => 'collapse', 'data-target' => '.navbar-collapse'}
-        %span.sr-only 'Toggle navigation'
-        - 3.times do
-          %span.icon-bar
-      = link_to 'Home', root_path, class: 'navbar-brand', id: 'nav-home'
-      - if signed_in?
-        .col-xs-offset-4#welcome-message
-          %p{class: 'visible-xs navbar-brand small navbar-text'}
-            = "Welcome #{current_user.email}"
-    .collapse.navbar-collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li
-          = link_to 'User Page', '#'
-        %li.dropdown
-          = link_to "#",{ class: 'dropdown-toggle', 'data-toggle' => 'dropdown'} do
-            User
-            %b.caret
-          %ul.dropdown-menu
-            - if !user_signed_in?
-              %li
-                = link_to 'Sign up', new_user_registration_path, :class => 'navbar-link'
-              %li.divider
-              %li
-                = link_to 'Login', new_user_session_path, :class => 'navbar-link'
-            - else
-              %li
-                = link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link'
-              %li.divider
-              %li
-                = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
-        - if user_signed_in?
-          %li.hidden-xs.col-xs-push-2.col-md-push-6.col-lg-push-9.navbar-brand#welcome-message
-            %a{href: '#'}
-              = "Welcome #{current_user.email}"
+%nav.navbar.navbar-fixed-top{role: 'navigation'}
+  .navbar-header
+    %button.navbar-toggle{ type: 'button', 'data-toggle' => 'collapse', 'data-target' => '.navbar-collapse'}
+      %span.sr-only 'Toggle navigation'
+      - 3.times do
+        %span.icon-bar
+    = link_to 'Home', root_path, class: 'navbar-brand', id: 'nav-home'
+    - if signed_in?
+      %p.navbar-text.visible-xs Welcome #{current_user.name}
+  - if signed_in?
+    %p.navbar-text.hidden-xs.welcome-message.col-sm-7.col-md-8.col-lg-9 Welcome #{current_user.name}
+  .collapse.navbar-collapse.navbar-header.navbar-right
+    %ul.nav.navbar-nav.navbar-left
+      %li
+        = link_to 'User Page', '#'
+    %ul.nav.navbar-nav.navbar-right.col-xs-offset-6
+      %li.dropdown.user-dropdown
+        = link_to "#",{ class: 'dropdown-toggle', 'data-toggle' => 'dropdown'} do
+          User
+          %b.caret
+        %ul.dropdown-menu
+          - if !user_signed_in?
+            %li
+              = link_to 'Sign up', new_user_registration_path, :class => 'navbar-link'
+            %li.divider
+            %li
+              = link_to 'Login', new_user_session_path, :class => 'navbar-link'
+          - else
+            %li
+              = link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link'
+            %li.divider
+            %li
+              = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
 
-      -#.nav.navbar-nav.navbar-right#nav-search
-      -#  = render 'layouts/form'
+    -#.nav.navbar-nav.navbar-right#nav-search
+    -#  = render 'layouts/form'

@@ -30,12 +30,14 @@ $grayMediumLight: #eaeaea;
 
 div#main {
   min-height: 100%;
-  position: relative;
   border-radius: 20px;
   padding: 0px 20px 20px 20px;
-  margin-top: 60px;
-  //  border: outset $gray-light;
+  margin-top: 100px;
   background: $grayMediumLight;
+  margin-left: 0em;
+}
+
+main {
 }
 
 #wrapper {
@@ -45,13 +47,17 @@ div#main {
   padding: 0 0 60px;
 }
 
+div.container-fluid{
+  height: 100%;
+}
+
 html, body {
   height: 100%;
   width: 100%
 }
 
 body {
-  background: $gray-light !important;
+  background: #7eb4bb !important;
 }
 
 section {
@@ -98,75 +104,104 @@ p {
 
 /* Header */
 
-#nav-home {
-  margin-right: 0px;
+/**********************************/
+/**********************************/
+/****** Custom Navbar Color *******/
+/**********************************/
+/**********************************/
+
+$bgDefault      : #ff5c3a;
+$bgHighlight    : #ea5435;
+$colDefault     : #ecf0f1;
+$colHover       : #ffbbbc;
+$colHighlight   : #6cdce0;
+.navbar {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  a#nav-home:hover {
+    background-color: $bgHighlight;
+  }
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault;
+    ul {
+      a:hover {
+        background-color: $bgHighlight;
+      }
+    }
+  }
+  .dropdown-menu {
+    background-color: $bgDefault;
+  }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus, {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
 }
 
-li#welcome-message {
-  margin-top: -15px;
-  margin-left: -2em;
+/************* Header *************/
+
+a.dropdown-toggle {
+  margin-right: 10px;
 }
 
-div#welcome-message {
-  width: 100%;
-  padding-left: auto;
-  padding-right: auto;
+.navbar {
+  a {
+//    padding-top: 5px;
+//    padding-bottom: 5px;
+//    margin-top: 5px;
+//    margin-bottom: -15px;
+  }
   p {
-    margin-top: -1px;
-    position: absolute;
-    display: inline;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: auto;
-    padding-right: auto;
-    letter-spacing: -1px;
-    word-spacing: -1px;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    margin-top: 10px;
   }
 }
-.welcome-message {
-  //  float:none;
+
+
+
+p.welcome-message {
+  text-align: center;
+  padding-left: 8em;
 }
-
-.navbar-header {
-
-  //  text-align:center;
-}
-
-//#nav-home {
-//  margin-right: 0px;
-//}
-//
-//nav {
-//  width: 100%;
-//}
-//
-//li.user-dropdown {
-////  float: right;
-//}
-//
-//li#welcome-message {
-//  margin-top: -15px;
-////  margin-left: -2em;
-//}
-//
-//div#welcome-message {
-//  width: 100%;
-//  padding-left: auto;
-//  padding-right: auto;
-//  p {
-//    margin-top: -1px;
-//    position: absolute;
-//    display: inline;
-//    text-align: center;
-//    margin-left: auto;
-//    margin-right: auto;
-//    padding-left: auto;
-//    padding-right: auto;
-//    letter-spacing: -1px;
-//    word-spacing: -1px;
-//  }
-//}
 
 /* Footer */
 

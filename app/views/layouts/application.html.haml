@@ -11,8 +11,8 @@
       = render 'layouts/header'
     .container-fluid
       #wrapper
-        %main{role: 'main'}
-          .row.col-xs-push-2.col-xs-8.box-shadow#main
+        %main.clearfix{role: 'main'}
+          .row.col-sm-push-2.col-sm-8.col-xs-push-0.col-xs-12.box-shadow#main
             = render 'layouts/flash_messages'
             = yield
             .push

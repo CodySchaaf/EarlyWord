@@ -11,6 +11,8 @@
 *= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
 *= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
 *= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
+*= require font-awesome
+*= require weather-icons
 *= require_self
 *= require_tree .
 */
@@ -33,9 +35,53 @@ div#main {
   border-radius: 20px;
   padding: 0px 20px 20px 20px;
   margin-top: 100px;
-  background: $grayMediumLight;
+  //  border-bottom: 1px solid;
+  //  border-bottom-color: #ccc;
+  //  border-bottom-color: rgba(255, 255, 255, 0.2);
+  //  background-color: rgba(255, 255, 255, 0.2);
+  //  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin-left: 0em;
 }
+
+body {
+  text-align: left;
+  font: 12px Arial, Helvetica, sans-serif;
+  color: #000;
+  background: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  width: 760px;
+  height: 500px;
+  margin: 0 auto;
+  background: url(http://share.stwrt.ca/blog/blue-pink-gradient.jpg) no-repeat center center fixed;
+  background-size: cover
+}
+
+//div#main::before {
+//  min-height: 100%;
+//  margin-top: 100px;
+//  position: absolute;
+////  top: 0;
+////  left: 0;
+//  z-index: -1;
+//  width: 100%;
+//  height: 100%;
+//  color: white;
+//  background-image:
+//    url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20width%3D%221920%22%20height%3D%221120%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22blur%22%3E%3CfeGaussianBlur%20stdDeviation%3D%225%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cimage%20xlink%3Ahref%3D%22http%3A%2F%2Fplacekitten.com%2F1920%2F1120%22%20width%3D%221920%22%20height%3D%221120%22%20filter%3D%22url%28%23blur%29%22%2F%3E%3C%2Fsvg%3E"),
+//    url("http://placekitten.com/1920/1120");
+//  background-position: center bottom;
+//  background-attachment: fixed;
+//  background-size: cover;
+//  content: "";
+//  filter: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22blur%22%3E%3CfeGaussianBlur%20stdDeviation%3D%225%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3C%2Fsvg%3E#blur");
+//  -webkit-filter: blur(5px);
+//  filter: blur(5px);
+//}
 
 main {
 }
@@ -47,17 +93,13 @@ main {
   padding: 0 0 60px;
 }
 
-div.container-fluid{
+div.container-fluid {
   height: 100%;
 }
 
 html, body {
   height: 100%;
   width: 100%
-}
-
-body {
-  background: #7eb4bb !important;
 }
 
 section {
@@ -110,11 +152,17 @@ p {
 /**********************************/
 /**********************************/
 
-$bgDefault      : #ff5c3a;
-$bgHighlight    : #ea5435;
-$colDefault     : #ecf0f1;
-$colHover       : #ffbbbc;
-$colHighlight   : #6cdce0;
+$bgDefault: #34495e;
+//$bgHighlight    : #ea5435;
+$bgHighlight: desaturate(darken($bgDefault, 5), 5%);
+$colDefault: #ecf0f1;
+$colHover: #ffbbbc;
+$colHighlight: #6cdce0;
+.btn {
+  background-color: $bgDefault !important;
+  border-color: $bgDefault !important;
+}
+
 .navbar {
   background-color: $bgDefault;
   border-color: $bgHighlight;
@@ -124,29 +172,43 @@ $colHighlight   : #6cdce0;
   .navbar-brand {
     color: $colDefault;
     &:hover, &:focus {
-      color: $colHighlight; }}
+      color: $colHighlight;
+    }
+  }
   .navbar-text {
-    color: $colDefault; }
+    color: $colDefault;
+  }
   .navbar-nav {
     > li {
       > a {
         color: $colDefault;
-        &:hover,  &:focus {
-          color: $colHighlight; }}}
+        &:hover, &:focus {
+          color: $colHighlight;
+        }
+      }
+    }
     > .active {
       > a, > a:hover, > a:focus {
         color: $colHighlight;
-        background-color: $bgHighlight; }}
+        background-color: $bgHighlight;
+      }
+    }
     > .open {
       > a, > a:hover, > a:focus {
         color: $colHighlight;
-        background-color: $bgHighlight; }}}
+        background-color: $bgHighlight;
+      }
+    }
+  }
   .navbar-toggle {
     border-color: $bgHighlight;
     &:hover, &:focus {
-      background-color: $bgHighlight; }
+      background-color: $bgHighlight;
+    }
     .icon-bar {
-      background-color: $colDefault; }}
+      background-color: $colDefault;
+    }
+  }
   .navbar-collapse,
   .navbar-form {
     border-color: $colDefault;
@@ -162,17 +224,26 @@ $colHighlight   : #6cdce0;
   .navbar-link {
     color: $colDefault;
     &:hover {
-      color: $colHighlight; }}}
+      color: $colHighlight;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu {
     > li > a {
       color: $colDefault;
       &:hover, &:focus {
-        color: $colHighlight; }}
+        color: $colHighlight;
+      }
+    }
     > .active {
       > a, > a:hover, > a:focus, {
         color: $colHighlight;
-        background-color: $bgHighlight; }}}
+        background-color: $bgHighlight;
+      }
+    }
+  }
 }
 
 /************* Header *************/
@@ -182,12 +253,6 @@ a.dropdown-toggle {
 }
 
 .navbar {
-  a {
-//    padding-top: 5px;
-//    padding-bottom: 5px;
-//    margin-top: 5px;
-//    margin-bottom: -15px;
-  }
   p {
     text-align: center;
     font-size: 1.3em;
@@ -195,8 +260,6 @@ a.dropdown-toggle {
     margin-top: 10px;
   }
 }
-
-
 
 p.welcome-message {
   text-align: center;

@@ -65,8 +65,7 @@ gem 'simple_form'
 gem 'roadie'
 
 # Delayed jobs, used to schedule weekly news letter
-gem 'delayed_job_active_record', github: 'CodySchaaf/delayed_job_active_record'
-gem 'delayed_job', github: 'collectiveidea/delayed_job'
+gem 'delayed_job_active_record'
 
 # Deamons used to run delayed_jobs
 gem 'daemons'
@@ -93,6 +92,12 @@ gem 'newrelic_rpm'
 # level specific methods like 'info', 'warn', 'debug'.
 # Rails.logger.warn("Look at me, I'm a warning")
 gem 'le'
+
+gem 'font-awesome-rails'
+
+# gem 'weather-icons-rails', '~> 0.0.1.1' ,git: 'git://github.com/CodySchaaf/weather-icons-rails.git'
+# gem 'weather-icons-rails', :path => '../weather-icons-rails'
+gem 'weather-icons-rails'
 
 group :development do
 	# used as preloader

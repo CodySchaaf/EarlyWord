@@ -2,6 +2,7 @@
 %html
   %head
     %title EarlyWord
+    = google_font_link_tag('Montserrat:400,700')
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -10,9 +11,9 @@
     %header
       = render 'layouts/header'
     .container-fluid
-      #wrapper
+      #wrapper.wrapper
         %main.clearfix{role: 'main'}
-          .row.col-sm-push-1.col-sm-10.col-xs-push-0.col-xs-12.box-shadow#main
+          .row.col-sm-push-1.col-sm-10.col-xs-push-0.col-xs-12#main
             = render 'layouts/flash_messages'
             = yield
             .push

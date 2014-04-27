@@ -1,23 +1,8 @@
 GIT
-  remote: git://github.com/CodySchaaf/delayed_job_active_record.git
-  revision: d903755f05579728994ed693a07ae192049c6719
-  specs:
-    delayed_job_active_record (4.0.0)
-      activerecord (>= 3.0, < 4.2)
-      delayed_job (>= 3.0, < 4.1)
-
-GIT
   remote: git://github.com/bmabey/database_cleaner.git
   revision: 35bd646903fc56af185a9fa9e360c568bb56756e
   specs:
     database_cleaner (1.2.0)
-
-GIT
-  remote: git://github.com/collectiveidea/delayed_job.git
-  revision: de8d4133a6dc57456d63d9b162003c0784ec0f8c
-  specs:
-    delayed_job (4.0.0)
-      activesupport (>= 3.0, < 4.2)
 
 GIT
   remote: git://github.com/laserlemon/figaro.git
@@ -104,6 +89,11 @@ GEM
     debugging (1.0.1)
       binding.repl (~> 1)
       paint (~> 0, >= 0.8.7)
+    delayed_job (4.0.1)
+      activesupport (>= 3.0, < 4.2)
+    delayed_job_active_record (4.0.1)
+      activerecord (>= 3.0, < 4.2)
+      delayed_job (>= 3.0, < 4.1)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -125,6 +115,8 @@ GEM
       paint (>= 0.8.1)
       unicode-display_width (>= 0.1.1)
     ffi (1.9.3)
+    font-awesome-rails (4.0.3.1)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.4)
     fuubar (1.3.2)
       rspec (>= 2.14.0, < 3.1.0)
@@ -216,7 +208,7 @@ GEM
     methodfinder (2.0.0)
     mime-types (1.25.1)
     mini_portile (0.5.3)
-    minitest (5.3.2)
+    minitest (5.3.3)
     multi_json (1.9.2)
     newrelic_rpm (3.7.3.204)
     nio4r (1.0.0)
@@ -260,7 +252,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
-    rake (10.2.2)
+    rake (10.3.1)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -357,6 +349,9 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    weather-icons-rails (0.1.0)
+      railties (>= 3.2, < 5.0)
+      sass (~> 3.2)
     websocket (1.0.7)
     wirb (1.0.3)
       paint (~> 0.8)
@@ -376,11 +371,11 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   daemons
   database_cleaner!
-  delayed_job!
-  delayed_job_active_record!
+  delayed_job_active_record
   devise
   factory_girl_rails
   figaro!
+  font-awesome-rails
   fuubar
   growl
   guard-rspec
@@ -416,3 +411,4 @@ DEPENDENCIES
   typhoeus
   uglifier (>= 1.3.0)
   unicorn
+  weather-icons-rails

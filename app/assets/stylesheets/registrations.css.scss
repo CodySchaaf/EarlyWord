@@ -1,3 +1,22 @@
 // Place all the styles related to the registrations/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bootstrap_importer';
+
+main {
+  h2 {
+    color: lightgray;
+    font-size: 4em;
+  }
+}
+
+form.new_user {
+  input:not(.btn) {
+    background: white;
+  }
+  input.btn.btn-default {
+    background-color: $gray-lighter;
+    margin-bottom: .5em;
+  }
+}

@@ -1,0 +1,35 @@
+---
+weather:
+  Partly Cloudy:
+    day: day-cloudy
+    night: night-cloudy
+    neutral: cloudy
+  Clear:
+    day: day-sunny
+    night: night-clear
+    neutral: horizon-alt
+  Mostly Cloudy:
+    day: cloudy
+    night: cloudy
+    neutral: cloudy
+  Scattered Clouds:
+    day: cloudy
+    night: cloudy
+    neutral: cloudy
+wind_string:
+  From the West at x MPH Gusting to x MPH:
+    day: day-cloudy-gusts
+    night: night-alt-cloudy-gusts
+    neutral: cloudy-gusts
+  From the WNW at x MPH Gusting to x MPH:
+    day: day-cloudy-gusts
+    night: night-alt-cloudy-gusts
+    neutral: cloudy-gusts
+  From the NW at x MPH Gusting to x MPH:
+    day: day-cloudy-gusts
+    night: night-alt-cloudy-gusts
+    neutral: cloudy-gusts
+  Calm:
+    day: day-cloudy-gusts
+    night: night-alt-cloudy-gusts
+    neutral: cloudy-gusts

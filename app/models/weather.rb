@@ -10,15 +10,11 @@ class Weather < ActiveRecord::Base
 	end
 
 	def self.get_weather(new_weather)
-		stored_weather = Weather.find_by_zip_code(new_weather.zip_code)
-
-		weather = stored_weather ? stored_weather.update_json! : Weather.create_new(new_weather)
-
-		weather
+		Doppler.fetch_weather(new_weather)
 	end
 
 	def update_json!
-		self.update_attributes json: Weather.get_current_weather(zip_code) unless current?
+		self.update_attributes json: Doppler.get_current_weather(zip_code) unless current?
 		self
 	end
 
@@ -30,21 +26,24 @@ class Weather < ActiveRecord::Base
 		json['response']['error'] && json['response']['error']['description'][/No cities match your search query/]
 	end
 
+	def self.update_key_words_weather_yaml(user_weather)
+		key_words = YAML::load_file(Rails.root.join('weather_key_words.yml'))
+		check_for_key_word key_words, user_weather.weather_in_words, 'weather'
+		check_for_key_word key_words, user_weather.sanatized_wind_in_words, 'wind_string'
+		key_words.with_indifferent_access
+	end
+
 	private
 
-	def self.create_new(new_weather)
-		self.create({ zip_code: new_weather.zip_code, json: self.get_current_weather(new_weather.zip_code) })
-	end
-
-	def self.get_current_weather(zip_code)
-		raise 'Big Problem Should not be in here during test' if ENV['RAILS_ENV'] == 'test'
-		response = Typhoeus.get "http://api.wunderground.com/api/#{Rails.application.secrets.wunderground_key}/forecast/conditions/hourly/q/#{zip_code}.json", followlocation: true
-		if ENV['RAILS_ENV'] == 'development' && response.response_code.to_s == '504'
-			raise 'Big Problem Should unless it is development' if ENV['RAILS_ENV'] == 'production'
-			logger.debug('An Error Occurred with wunderground, using lame data.')
-			JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
-		else
-			JSON.parse response.body
+	def self.check_for_key_word(key_words, yaml_key, type)
+		unless key_words[type].has_key?(yaml_key)
+			key_words[type][yaml_key] = {day: 'NEEDS IMAGE ASSIGNMENT', night: 'NEEDS IMAGE ASSIGNMENT', neutral: 'NEEDS IMAGE ASSIGNMENT'}.stringify_keys
+			File.open(Rails.root.join('weather_key_words.yml'), 'w') {|f| f.write key_words.to_yaml }
 		end
 	end
+
+	def self.create_new(zip_code)
+		self.create({ zip_code: zip_code, json: Doppler.get_current_weather(zip_code) })
+	end
+
 end

@@ -20,9 +20,14 @@ class WeathersController < ApplicationController
 
 	def show
 		@weather = Weather.find(params[:id])
-		user_weather = @weather.json
+		@response = WeatherResponse.new(@weather.update_json!.json.with_indifferent_access)
 
-		@current_observation = user_weather['current_observation']
+		@key_words = Weather.update_key_words_weather_yaml @response
+
+		respond_to do |format|
+			format.json { render json: @response }
+			format.html {}
+		end
 	end
 
 	protected

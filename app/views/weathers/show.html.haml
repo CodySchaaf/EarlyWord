@@ -1,5 +1,26 @@
-= render 'show_attribute', weather_attribute: 'Temperature:', value: raw("#{@current_observation['temp_f']} " + '&deg; F')
-%small.text-muted.col-xs-offset-7.sub-text= raw("- Feels Like: #{@current_observation['feelslike_f']} &deg; F")
-= render 'show_attribute', weather_attribute: 'Humidity:', value: @current_observation['relative_humidity']
-#wunderground-logo.col-xs-offset-5.col-xs-7.col-sm-offset-8.col-sm-4.col-lg-offset-10.col-lg-2
-  = image_tag('wundergroundLogo_blue_horz.png', alt: 'wundergroundLogo')
+.wrapper
+  .background.row
+    .widget.col-xs-12
+      .leftside.col-xs-12.col-sm-6
+        .front.col-xs-12
+          .weather
+            %ul.hourly
+              - @response.get_hourly_forecast.each do |hour|
+                %li= raw(hour)
+            -#.temperature
+            -#  %div Cody
+            -#.time
+            -#  %div Time
+      .rightside.col-xs-12.col-sm-6
+        .front.col-xs-12
+          %ul.breakdown
+            %li
+              = @response.get_weather_icon
+              %span= @response.weather_in_words
+              %span= raw(@response.degrees_f)
+            %li
+              = @response.get_wind_icon
+              %span= @response.formatted_wind
+            %li
+              %span.spacer
+            %span= @response.weather_now_long

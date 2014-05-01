@@ -7,14 +7,12 @@
 *
 * You're free to add application-wide styles to this file and they'll appear at the top of the
 * compiled file, but it's generally better to create a new file per style scope.
-*= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
-*= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
-*= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
-*= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
+*= require font-awesome
+*= require weather-icons
 *= require_self
 *= require_tree .
 */
-@import 'bootstrap';
+@import 'bootstrap_importer';
 
 /* mixins, variables, etc. */
 
@@ -28,14 +26,42 @@ $grayMediumLight: #eaeaea;
 
 /* universal */
 
+p.alert{
+  font-size: 2em;
+  color: lightgray;
+}
+
 div#main {
   min-height: 100%;
   border-radius: 20px;
   padding: 0px 20px 20px 20px;
   margin-top: 100px;
-  background: $grayMediumLight;
+  //  border-bottom: 1px solid;
+  //  border-bottom-color: #ccc;
+  //  border-bottom-color: rgba(255, 255, 255, 0.2);
+  //  background-color: rgba(255, 255, 255, 0.2);
+  //  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin-left: 0em;
 }
+
+body {
+  text-align: left;
+  font: 12px Arial, Helvetica, sans-serif;
+  color: #000;
+  background: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  width: 760px;
+  height: 500px;
+  margin: 0 auto;
+  background: url(http://share.stwrt.ca/blog/blue-pink-gradient.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
 
 main {
 }
@@ -47,17 +73,13 @@ main {
   padding: 0 0 60px;
 }
 
-div.container-fluid{
+div.container-fluid {
   height: 100%;
 }
 
 html, body {
   height: 100%;
   width: 100%
-}
-
-body {
-  background: #7eb4bb !important;
 }
 
 section {
@@ -110,11 +132,17 @@ p {
 /**********************************/
 /**********************************/
 
-$bgDefault      : #ff5c3a;
-$bgHighlight    : #ea5435;
-$colDefault     : #ecf0f1;
-$colHover       : #ffbbbc;
-$colHighlight   : #6cdce0;
+$bgDefault: #34495e;
+//$bgHighlight    : #ea5435;
+$bgHighlight: desaturate(darken($bgDefault, 5), 5%);
+$colDefault: #ecf0f1;
+$colHover: #ffbbbc;
+$colHighlight: #6cdce0;
+.btn {
+//  background-color: $bgDefault !important;
+//  border-color: $bgDefault !important;
+}
+
 .navbar {
   background-color: $bgDefault;
   border-color: $bgHighlight;
@@ -124,29 +152,43 @@ $colHighlight   : #6cdce0;
   .navbar-brand {
     color: $colDefault;
     &:hover, &:focus {
-      color: $colHighlight; }}
+      color: $colHighlight;
+    }
+  }
   .navbar-text {
-    color: $colDefault; }
+    color: $colDefault;
+  }
   .navbar-nav {
     > li {
       > a {
         color: $colDefault;
-        &:hover,  &:focus {
-          color: $colHighlight; }}}
+        &:hover, &:focus {
+          color: $colHighlight;
+        }
+      }
+    }
     > .active {
       > a, > a:hover, > a:focus {
         color: $colHighlight;
-        background-color: $bgHighlight; }}
+        background-color: $bgHighlight;
+      }
+    }
     > .open {
       > a, > a:hover, > a:focus {
         color: $colHighlight;
-        background-color: $bgHighlight; }}}
+        background-color: $bgHighlight;
+      }
+    }
+  }
   .navbar-toggle {
     border-color: $bgHighlight;
     &:hover, &:focus {
-      background-color: $bgHighlight; }
+      background-color: $bgHighlight;
+    }
     .icon-bar {
-      background-color: $colDefault; }}
+      background-color: $colDefault;
+    }
+  }
   .navbar-collapse,
   .navbar-form {
     border-color: $colDefault;
@@ -162,17 +204,26 @@ $colHighlight   : #6cdce0;
   .navbar-link {
     color: $colDefault;
     &:hover {
-      color: $colHighlight; }}}
+      color: $colHighlight;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu {
     > li > a {
       color: $colDefault;
       &:hover, &:focus {
-        color: $colHighlight; }}
+        color: $colHighlight;
+      }
+    }
     > .active {
       > a, > a:hover, > a:focus, {
         color: $colHighlight;
-        background-color: $bgHighlight; }}}
+        background-color: $bgHighlight;
+      }
+    }
+  }
 }
 
 /************* Header *************/
@@ -182,12 +233,6 @@ a.dropdown-toggle {
 }
 
 .navbar {
-  a {
-//    padding-top: 5px;
-//    padding-bottom: 5px;
-//    margin-top: 5px;
-//    margin-bottom: -15px;
-  }
   p {
     text-align: center;
     font-size: 1.3em;
@@ -195,8 +240,6 @@ a.dropdown-toggle {
     margin-top: 10px;
   }
 }
-
-
 
 p.welcome-message {
   text-align: center;

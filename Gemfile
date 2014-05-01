@@ -99,6 +99,8 @@ gem 'font-awesome-rails'
 # gem 'weather-icons-rails', :path => '../weather-icons-rails'
 gem 'weather-icons-rails'
 
+gem 'doppler', path: './lib/gems/doppler'
+
 group :development do
 	# used as preloader
 	gem 'spring'

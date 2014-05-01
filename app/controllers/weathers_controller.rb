@@ -20,7 +20,7 @@ class WeathersController < ApplicationController
 
 	def show
 		@weather = Weather.find(params[:id])
-		@response = @weather.update_json!.json.with_indifferent_access
+		@response = WeatherResponse.new(@weather.update_json!.json.with_indifferent_access)
 
 		@key_words = Weather.update_key_words_weather_yaml @response
 

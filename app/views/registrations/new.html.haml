@@ -9,5 +9,5 @@
     = f.input :password, required: true, placeholder: 'Password'#, label: false
     = f.input :password_confirmation, required: true, placeholder: 'Confirm Password'#, label: false
   .form-actions
-    = f.button :submit, 'Sign up'
+    = f.button :submit, 'Sign up', class: 'btn btn-default'
 = render 'devise/shared/links'

@@ -142,7 +142,22 @@ ul.breakdown {
 }
 
 .weather {
-  position: absolute;
+  margin: 0;
+//  list-style: none;
+  position: relative;
+  padding: 40px 30px;
+//  position: absolute;
+//  width: 120px;
+//  height: 80px;
+//  margin: auto;
+//  top: 0;
+//  bottom: 0;
+//  right: 0;
+//  left: 0;
+}
+
+.temperature {
+  font-size: 2em;
   width: 120px;
   height: 80px;
   margin: auto;
@@ -152,11 +167,14 @@ ul.breakdown {
   left: 0;
 }
 
-.temperature {
-  font-size: 4em;
-  position: relative;
-  height: 60px;
-  width: 120px;
+.hourly {
+  font-size: 2em;
+  list-style: none;
+  li {
+    position: relative;
+    width: 100%;
+    height: 34px;
+  }
 }
 
 .time {

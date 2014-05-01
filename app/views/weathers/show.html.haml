@@ -4,35 +4,23 @@
       .leftside.col-xs-12.col-sm-6
         .front.col-xs-12
           .weather
-            .temperature
-              %div Cody
-            .time
-              %div Time
+            %ul.hourly
+              - @response.get_hourly_forecast.each do |hour|
+                %li= raw(hour)
+            -#.temperature
+            -#  %div Cody
+            -#.time
+            -#  %div Time
       .rightside.col-xs-12.col-sm-6
         .front.col-xs-12
           %ul.breakdown
             %li
-              = get_weather_icon @response, @key_words
-              %span= @response[:current_observation][:weather]
-              %span= raw("#{@response[:current_observation][:temp_f]} &deg; F")
+              = @response.get_weather_icon
+              %span= @response.weather_in_words
+              %span= raw(@response.degrees_f)
             %li
-              = get_wind_icon @response, @key_words
-              %span= format_wind @response
+              = @response.get_wind_icon
+              %span= @response.formatted_wind
             %li
               %span.spacer
-            -#%li
-              -#%i.wi.wi-day-hail.wi-lg
-            %span Partly cloudy. Fog early. High of 63F. Winds from the South at 5 to 15 mph shifting to the West in the afternoon.
-            -#%li
-            -#  = wi_icon('day-cloudy-gusts lg')
-            -#  %span Departs at 8:50
-
-
-
-
-
--#= render 'show_attribute', weather_attribute: 'Temperature:', value: raw("#{@current_observation['temp_f']} " + '&deg; F')
--#%small.text-muted.col-xs-offset-7.sub-text= raw("- Feels Like: #{@current_observation['feelslike_f']} &deg; F")
--#= render 'show_attribute', weather_attribute: 'Humidity:', value: @current_observation['relative_humidity']
--##wunderground-logo.col-xs-offset-5.col-xs-7.col-sm-offset-8.col-sm-4.col-lg-offset-10.col-lg-2
--#  = image_tag('wundergroundLogo_blue_horz.png', alt: 'wundergroundLogo')
+            %span= @response.weather_now_long

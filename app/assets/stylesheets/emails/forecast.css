@@ -31,7 +31,7 @@ h5#navbar-title {
 
 a { color: #2BA6CB;}
 
-.btn {
+a.btn {
 	text-decoration:none;
 	color: #FFF;
 	background-color: #666;

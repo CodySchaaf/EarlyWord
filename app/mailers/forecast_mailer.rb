@@ -1,5 +1,6 @@
 class ForecastMailer < ActionMailer::Base
-  default css: 'emails/email', from: 'word.early@gmail.com'
+	add_template_helper ForecastMailersHelper
+	default css: 'emails/email', from: 'word.early@gmail.com'
 
   def sign_up_email(user)
 	  @user = user

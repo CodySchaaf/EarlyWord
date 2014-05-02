@@ -4,7 +4,7 @@ describe Weather do
 	let(:weather) { build :weather }
 	before(:all) {Timecop.freeze}
 	after(:all) {Timecop.return}
-	before {allow(Weather).to receive(:get_current_weather).with(kind_of(Numeric)) {get_fake_found_weather}}
+	before {allow(Doppler).to receive(:get_current_weather).with(kind_of(Numeric)) {get_fake_found_weather}}
 
 	subject{ weather }
 
@@ -114,16 +114,13 @@ describe Weather do
 	end
 
 	describe 'creat_new weather instance' do
-		let(:new_weather) { Weather.new }
-		before do
-			new_weather.zip_code = ((build :weather).zip_code)
-		end
-		subject { Weather.create_new(new_weather) }
+		let(:zip_code) { FactoryGirl.generate :zip_code }
+		subject { Weather.create_new(zip_code) }
 
 		it { expect{subject}.to change(Weather, :count).by(1) }
 		it {
 			subject
-			expect(Weather.last.zip_code).to eq(new_weather.zip_code)
+			expect(Weather.last.zip_code.to_s).to eq(zip_code)
 			expect(Weather.last.json).to have_key('response')
 		}
 	end

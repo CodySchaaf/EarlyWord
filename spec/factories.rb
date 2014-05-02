@@ -1,6 +1,6 @@
 FactoryGirl.define do
 	after(:build) { |object| puts "Built #{object}" }
-
+	sequence(:zip_code, '10001') { |n| n}
 
 	factory :user do
 		association :weather
@@ -13,7 +13,7 @@ FactoryGirl.define do
 	end
 
 	factory :weather, aliases: [:zip_code] do
-		sequence(:zip_code, '10001') { |n| n}
+		zip_code { generate :zip_code }
 		json ''
 
 		after :create do |weather|

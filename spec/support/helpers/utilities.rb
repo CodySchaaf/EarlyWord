@@ -7,5 +7,5 @@ end
 
 def get_fake_found_weather
 	puts 'Getting get_fake_found_weather'
-	JSON.parse(File.read(Rails.root.join('json_sample.json')).chomp)
+	JSON.parse(File.read(Rails.root.join('json_sample_extended.json')).chomp)
 end

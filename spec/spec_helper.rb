@@ -49,7 +49,7 @@ Spork.prefork do
 		#     --seed 1234
 		config.order = "random"
 		config.before(:each) do
-			allow(Weather).to receive(:get_current_weather).and_return(get_fake_found_weather)
+			allow(Doppler).to receive(:get_current_weather) {get_fake_found_weather}
 		end
 
 		config.before(:suite) do

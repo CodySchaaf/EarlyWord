@@ -5,7 +5,7 @@ describe ForecastJob do
 	let!(:user) { create :user, weather: weather }
 	before do
 		Delayed::Job.first.destroy #For deleting the email jobs since it isn't needed.
-		allow(Weather).to receive(:get_current_weather).and_return(get_fake_found_weather)
+		allow(Doppler).to receive(:get_current_weather).and_return(get_fake_found_weather)
 		weather.update_attribute :json, get_fake_found_weather
 		allow(Weather).to receive(:find) { weather }
 		ActionMailer::Base.deliveries.clear

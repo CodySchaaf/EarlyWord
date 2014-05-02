@@ -5,7 +5,6 @@ describe ForecastMailer do
 	let(:weather) { create :weather }
 	let!(:user) { create :user, weather: weather }
 	before do
-		allow(Weather).to receive(:get_current_weather).and_return(get_fake_found_weather)
 		weather.update_attribute :json, get_fake_found_weather
 		allow(Weather).to receive(:find) { weather }
 		ActionMailer::Base.deliveries.clear

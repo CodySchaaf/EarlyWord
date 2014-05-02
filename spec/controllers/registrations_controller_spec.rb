@@ -60,7 +60,7 @@ describe RegistrationsController do
 			let(:params) { {user: attributes_for(:user), weather: attributes_for(:zip_code, zip_code: 90000)} }
 			subject {post :create, params }
 			before do
-				allow(Weather).to receive(:get_current_weather).and_return(get_fake_not_found_weather)
+				allow(Doppler).to receive(:get_current_weather).and_return(get_fake_not_found_weather)
 			end
 			it 'creates new user' do
 				expect{subject}.to change(User, :count).by(1)

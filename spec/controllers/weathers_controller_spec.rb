@@ -99,8 +99,8 @@ describe WeathersController do
 				expect(assigns(:weather)).to eq(Weather.last)
 			end
 
-			it 'loads the current_weather into @current_observation' do
-				expect(assigns(:current_observation)).to be_a(Hash)
+			it 'loads the current_weather into response' do
+				expect(assigns(:response)).to be_a(WeatherResponse)
 			end
 		end
 	end
@@ -109,7 +109,7 @@ describe WeathersController do
 		let(:params) { { weather: attributes_for(:zip_code, zip_code: 90000)} }
 		subject {post :create, params }
 		before do
-			allow(Weather).to receive(:get_current_weather).and_return(get_fake_not_found_weather)
+			allow(Doppler).to receive(:get_current_weather).and_return(get_fake_not_found_weather)
 		end
 
 		it 'returns success' do

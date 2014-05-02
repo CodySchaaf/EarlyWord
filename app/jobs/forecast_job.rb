@@ -7,6 +7,6 @@ class ForecastJob < Struct.new(:user)
 
 	#Todo think about this
 	def max_attempts
-		20
+		3
 	end
 end

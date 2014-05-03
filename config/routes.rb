@@ -4,6 +4,6 @@ EarlyWord::Application.routes.draw do
 
 	root 'weathers#new'
 
-	resources :weathers, only: [:new, :create, :show]
+	resources :weathers, only: [:new, :create, :show, :destroy]
 
 end

@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe WeathersController do
+	include Devise::TestHelpers
 
 	describe 'submitting to the new action' do
 		before { get :new }

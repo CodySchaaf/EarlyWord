@@ -97,6 +97,17 @@ textarea {
   }
 }
 
+.form-subtext {
+  font-size: 1.2em;
+  &:link {
+    color: lightgray;
+  }
+  &:visited{
+    color: lightgray;
+  }
+
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -183,7 +194,7 @@ $colHighlight: #6cdce0;
   .navbar-toggle {
     border-color: $bgHighlight;
     &:hover, &:focus {
-      background-color: $bgHighlight;
+      background-color: pink;
     }
     .icon-bar {
       background-color: $colDefault;

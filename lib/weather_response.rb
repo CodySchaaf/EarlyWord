@@ -8,6 +8,7 @@ class WeatherResponse
 	RESPONSE_DATA = {
 			weather_in_words: [:current_observation, :weather],
 			temp_f:           [:current_observation, :temp_f],
+			zip_code:         [:current_observation, :display_location, :zip],
 			sunrise:          [:moon_phase, :sunrise],
 			sunset:           [:moon_phase, :sunset],
 	    wind_in_words:    [:current_observation, :wind_string],

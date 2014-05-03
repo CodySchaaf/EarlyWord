@@ -7,6 +7,7 @@
 //= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
 @import 'bootstrap';
 
+
 $grayMediumLight: #eaeaea;
 
 .weather-info {
@@ -52,306 +53,322 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-}
 
-.leftside, .rightside {
-  float: left;
-  position: relative;
-  height: 100%;
-  padding: 0px;
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
-}
-
-.front {
-  position: absolute;
-  top: 0;
-  z-index: 900;
-  height: inherit;
-  text-align: center;
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-transform-style: preserve-3d;
-  -moz-backface-visibility: hidden;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.rightside .front {
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);
-  font-size: 1em;
-  letter-spacing: -0.25px;
-  text-transform: uppercase;
-  line-height: 34px;
-  background: #fff;
-  color: #000;
-}
-
-ul.breakdown {
-  margin: 0;
-  list-style: none;
-  position: relative;
-  padding: 40px 30px;
-  li {
+  .leftside, .rightside {
+    float: left;
     position: relative;
-    width: 100%;
-    height: 34px;
+    height: 100%;
+    padding: 0px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
   }
-  i {
-    float: left;
-    display: block;
-    width: 25px;
-    height: 20px;
-    padding-top: 8px;
-    &::before {
-      text-align: center;
-      vertical-align: middle;
 
-    }
+  .front {
+    position: absolute;
+    top: 0;
+    z-index: 900;
+    height: inherit;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
-  span {
-    color: #777;
-    padding-left: 10px;
-    float: left;
-    height: 34px;
-    display: block;
-    padding-top: 5px;
-    &.spacer {
-      position: absolute;
-      padding: 0px;
-      height: 1px;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      background-color: #7e7e7e;
-    }
+
+  .rightside .front {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: -0.25px;
+    line-height: 34px;
+    background: #fff;
+    color: #000;
   }
-}
 
-.leftside .front {
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);
-  background: #303030;
-  color: #fff;
-}
-
-.weather {
-  margin: 0;
-//  list-style: none;
-  position: relative;
-  padding: 40px 30px;
-//  position: absolute;
-//  width: 120px;
-//  height: 80px;
-//  margin: auto;
-//  top: 0;
-//  bottom: 0;
-//  right: 0;
-//  left: 0;
-}
-
-.temperature {
-  font-size: 2em;
-  width: 120px;
-  height: 80px;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-
-.hourly {
-  font-size: 2em;
-  list-style: none;
-  li {
-    position: relative;
-    width: 100%;
-    height: 34px;
-  }
-}
-
-.time {
-  position: relative;
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-.settings-cont {
-  position: absolute;
-  width: 100%;
-  bottom: 20px;
-}
-
-.settings {
-  position: relative;
-  margin: 0 auto;
-  height: 16px;
-  width: 16px;
-  background: url(http://i.imgur.com/F0iAyFQ.png) no-repeat;
-  &:hover {
-    background: url(http://i.imgur.com/AzBbVD6.png) no-repeat;
-  }
-}
-
-.return {
-  position: absolute;
-  z-index: 99;
-  right: 10px;
-  top: 10px;
-  height: 8px;
-  width: 8px;
-  background: url(http://i.imgur.com/8iPF0GP.png) no-repeat;
-}
-
-.flipl .front {
-  z-index: 900;
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-}
-
-.flipr .front {
-  z-index: 900;
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-}
-
-.back {
-  position: absolute;
-  top: 0;
-  z-index: 800;
-  width: inherit;
-  height: inherit;
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-transform-style: preserve-3d;
-  -moz-backface-visibility: hidden;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  i {
-    width: 30px;
-    height: 32px;
-    float: left;
-  }
-}
-
-.leftside .back {
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  background: url(http://i.imgur.com/4agSxDW.png) no-repeat center;
-}
-
-.username {
-  background: url(http://i.imgur.com/eSPIdoy.png) no-repeat center;
-}
-
-.password {
-  background: url(http://i.imgur.com/dKHpaR1.png) no-repeat center;
-}
-
-.ribbon-cont {
-  position: relative;
-  width: 100%;
-}
-
-.ribbon {
-  position: relative;
-  width: 23px;
-  height: 50px;
-  margin: 0 auto;
-  background: url(http://i.imgur.com/cYR9Wss.png) no-repeat;
-}
-
-.wunderlog {
-  position: relative;
-  padding: 40px 0 0 0;
-}
-
-.inputwrapper {
-  position: relative;
-  width: 150px;
-  height: 32px;
-  background-color: #fff;
-  margin: 0 auto 30px auto;
-}
-
-.wunderlog .inputwrapper {
-  border: 1px solid #fff;
-}
-
-.active {
-  border: 1px solid #777;
-}
-
-.wunderlog input {
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 16px;
-  height: 16px;
-  margin: 0;
-  outline: none;
-  float: left;
-  padding: 8px;
-  width: 104px;
-}
-
-.rightside .back {
-  background: #fff;
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-}
-
-.location {
-  background: url(http://i.imgur.com/XpYSAB5.png) no-repeat center;
-}
-
-.alarm {
-  background: url(http://i.imgur.com/awYPmhl.png) no-repeat center;
-}
-
-.todo {
-  position: relative;
-  padding: 90px 0 0 0;
-  .inputwrapper {
-    border: 1px solid #e6e6e6;
-  }
-  input {
+  ul.breakdown {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    padding: 8px;
-    float: left;
+    list-style: none;
+    position: relative;
+    padding: 40px 30px;
+    li {
+      position: relative;
+      width: 100%;
+      height: 34px;
+    }
+    i {
+      float: left;
+      display: block;
+      width: 25px;
+      height: 20px;
+      padding-top: 8px;
+      &::before {
+        text-align: center;
+        vertical-align: middle;
+
+      }
+    }
+    span {
+      color: #777;
+      padding-left: 10px;
+      float: left;
+      height: 34px;
+      display: block;
+      padding-top: 5px;
+      &.spacer {
+        position: absolute;
+        padding: 0px;
+        height: 1px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #7e7e7e;
+      }
+    }
+  }
+
+  .leftside .front {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    background: #303030;
+    color: #fff;
+  }
+
+  .weather {
+    margin: 0;
+    position: relative;
+    padding: 40px 30px;
+  }
+
+  .temperature {
+    font-size: 2em;
+    width: 120px;
+    height: 80px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .hourly {
+    font-size: 2em;
+    list-style: none;
+    li {
+      position: relative;
+      width: 100%;
+      height: 34px;
+    }
+  }
+
+  .time {
+    position: relative;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+
+  .zip-code-container {
+    letter-spacing: -0.25px;
+    position: relative;
+    width: 100%;
+    bottom: .5em;
+    font-size: 2em;
+
+//    display: block;
+//    -webkit-transition: opacity 1s ease-out;
+//    opacity: 0;
+//    height: 0;
+//    overflow: hidden;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      .zip-code {
+        display: none;
+      }
+      .change-zip-code{
+        display: inline;
+      }
+    }
+  }
+
+  .change-zip-code {
+    display: none;
+  }
+
+  .zip-code.change-zip-code {
+    top: -10px;
+    position: relative;
+    width: 5em;
+    height: 2em;
+    margin: -10px auto 0;
+    display: inline-block;
+  }
+
+  .underline {
+    border-bottom: .1em white solid;
+  }
+
+  .return {
+    position: absolute;
+    z-index: 99;
+    right: 10px;
+    top: 10px;
+    height: 8px;
+    width: 8px;
+    background: url(http://i.imgur.com/8iPF0GP.png) no-repeat;
+  }
+
+  .flipl .front {
+    z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
+
+  .flipr .front {
+    z-index: 900;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+  }
+
+  .back {
+    position: absolute;
+    top: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    i {
+      width: 30px;
+      height: 32px;
+      float: left;
+    }
+  }
+
+  .leftside .back {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    background: url(http://i.imgur.com/4agSxDW.png) no-repeat center;
+  }
+
+  .username {
+    background: url(http://i.imgur.com/eSPIdoy.png) no-repeat center;
+  }
+
+  .password {
+    background: url(http://i.imgur.com/dKHpaR1.png) no-repeat center;
+  }
+
+  .ribbon-cont {
+    position: relative;
+    width: 100%;
+  }
+
+  .ribbon {
+    position: relative;
+    width: 23px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(http://i.imgur.com/cYR9Wss.png) no-repeat;
+  }
+
+  .wunderlog {
+    position: relative;
+    padding: 40px 0 0 0;
+  }
+
+  .inputwrapper {
+    position: relative;
+    width: 150px;
+    height: 32px;
+    background-color: #fff;
+    margin: 0 auto 30px auto;
+  }
+
+  .wunderlog .inputwrapper {
+    border: 1px solid #fff;
+  }
+
+  .active {
+    border: 1px solid #777;
+  }
+
+  .wunderlog input {
     border: none;
+    font-family: 'Montserrat', sans-serif;
     line-height: 16px;
     height: 16px;
+    margin: 0;
     outline: none;
-    display: block;
-    position: relative;
+    float: left;
+    padding: 8px;
     width: 104px;
   }
-}
 
-.flipl .back {
-  z-index: 1000;
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);
-}
+  .rightside .back {
+    background: #fff;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
 
-.flipr .back {
-  z-index: 1000;
-  -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);
-}
+  .location {
+    background: url(http://i.imgur.com/XpYSAB5.png) no-repeat center;
+  }
 
-::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
-  font-style: italic;
-  font-family: arial;
+  .alarm {
+    background: url(http://i.imgur.com/awYPmhl.png) no-repeat center;
+  }
+
+  .todo {
+    position: relative;
+    padding: 90px 0 0 0;
+    .inputwrapper {
+      border: 1px solid #e6e6e6;
+    }
+    input {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      padding: 8px;
+      float: left;
+      border: none;
+      line-height: 16px;
+      height: 16px;
+      outline: none;
+      display: block;
+      position: relative;
+      width: 104px;
+    }
+  }
+
+  .flipl .back {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  .flipr .back {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+    font-style: italic;
+    font-family: arial;
+  }
 }

@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   after_create :send_sign_up_email
   after_create :schedule_forecast_email
 
-  delegate :zip_code, to: :weather
+  delegate :zip_code, to: :weather, allow_nil: true
 
   def update_forecast_schedule(new_time = forecast_scheduled_at)
 	  logger.debug('We are now updating the forecast schedule')

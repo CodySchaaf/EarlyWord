@@ -13,9 +13,15 @@ class WeathersController < ApplicationController
 		session[:zip_code] = @weather.zip_code
 
 		if signed_in?
-			current_user.update_attributes!(zip_code_id: @weather.id)
+			current_user.update_attributes!(weather_id: @weather.id)
 		end
 		redirect_to @weather
+	end
+
+	def destroy
+		session.delete(:zip_code)
+		current_user.update_attributes!(weather_id: nil) if signed_in?
+		redirect_to(root_path)
 	end
 
 	def show

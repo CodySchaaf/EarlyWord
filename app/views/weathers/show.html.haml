@@ -11,6 +11,9 @@
             -#  %div Cody
             -#.time
             -#  %div Time
+          .zip-code-container
+            = link_to(@response.zip_code, weather_path, method: :delete, class: 'zip-code underline')
+            = link_to('Change Zip Code?', weather_path, method: :delete, class: 'change-zip-code underline')
       .rightside.col-xs-12.col-sm-6
         .front.col-xs-12
           %ul.breakdown

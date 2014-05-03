@@ -33,3 +33,7 @@ wind_string:
     day: day-cloudy-gusts
     night: night-alt-cloudy-gusts
     neutral: cloudy-gusts
+  From the WSW at x MPH Gusting to x MPH:
+    day: NEEDS IMAGE ASSIGNMENT
+    night: NEEDS IMAGE ASSIGNMENT
+    neutral: NEEDS IMAGE ASSIGNMENT

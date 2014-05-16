@@ -1,10 +1,10 @@
-#EarlyWord.Views.Widgits ||= {}
+#EarlyWord.Views.Widgets ||= {}
 #
-#class EarlyWord.Views.Widgits.NewView extends Backbone.View
-#  template: JST["backbone/templates/widgits/new"]
+#class EarlyWord.Views.Widgets.NewView extends Backbone.View
+#  template: JST["backbone/templates/widgets/new"]
 #
 #  events:
-#    "submit #new-widgit": "save"
+#    "submit #new-widget": "save"
 #
 #  constructor: (options) ->
 #    super(options)
@@ -21,11 +21,11 @@
 #    @model.unset("errors")
 #
 #    @collection.create(@model.toJSON(),
-#      success: (widgit) =>
-#        @model = widgit
+#      success: (widget) =>
+#        @model = widget
 #        window.location.hash = "/#{@model.id}"
 #
-#      error: (widgit, jqXHR) =>
+#      error: (widget, jqXHR) =>
 #        @model.set({errors: $.parseJSON(jqXHR.responseText)})
 #    )
 #

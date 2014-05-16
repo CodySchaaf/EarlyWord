@@ -27,11 +27,8 @@
             %li
               %span.spacer
             %span= @response.weather_now_long
-  .row.custome-widgest
+  .row.custom-widgets
     .col-xs-12
 
 :javascript
-  $(function() {
-    window.router = new EarlyWord.Routers.EarlyWordRouter({widgits: #{@widgits.to_json.html_safe}});
-    Backbone.history.start();
-  });
+  $(EarlyWord.init(#{@widgets.to_json.html_safe}));

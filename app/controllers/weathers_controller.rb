@@ -25,6 +25,7 @@ class WeathersController < ApplicationController
 	end
 
 	def show
+		@widgets = {id: '1', location: '', temperature: ''}
 		@weather = Weather.find(params[:id])
 		@response = WeatherResponse.new(@weather.update_json!.json.with_indifferent_access)
 

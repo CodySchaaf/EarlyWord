@@ -101,6 +101,9 @@ gem 'weather-icons-rails'
 
 gem 'doppler', path: './lib/gems/doppler'
 
+gem 'rails-backbone'
+
+
 group :development do
 	# used as preloader
 	gem 'spring'

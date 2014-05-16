@@ -34,29 +34,33 @@ body {
 }
 
 .wrapper {
-  height: 250px;
+//  height: 250px;
   font: 12px Arial, Helvetica, sans-serif;
   font-family: 'Montserrat', sans-serif;
-  width: 100%;
+//  width: 100%;
 }
 
 .background {
   background: url(http://share.stwrt.ca/blog/blue-pink-gradient.jpg) bottom center;
-  width: 100%;
+//  width: 100%;
+}
+
+.custome-widgest{
+  height: 10em;
 }
 
 .widget {
-  position: absolute;
+//  position: absolute;
   height: 250px;
   margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+//  top: 0;
+//  bottom: 0;
+//  right: 0;
+//  left: 0;
 
   .leftside, .rightside {
-    float: left;
-    position: relative;
+//    float: left;
+//    position: relative;
     height: 100%;
     padding: 0px;
     -webkit-perspective: 600px;
@@ -64,8 +68,8 @@ body {
   }
 
   .front {
-    position: absolute;
-    top: 0;
+//    position: absolute;
+//    top: 0;
     z-index: 900;
     height: inherit;
     text-align: center;

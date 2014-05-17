@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329054649) do
+ActiveRecord::Schema.define(version: 20140517051458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,11 @@ ActiveRecord::Schema.define(version: 20140329054649) do
     t.integer  "weather_id"
     t.string   "name"
     t.datetime "forecast_scheduled_at"
+    t.integer  "widget_1"
+    t.integer  "widget_2"
+    t.integer  "widget_3"
+    t.integer  "widget_4"
+    t.integer  "widget_5"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

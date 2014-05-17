@@ -12,12 +12,6 @@ class RegistrationsController < Devise::RegistrationsController
 		@weather = Weather.get_weather zip_code
 		@zip_code = Weather.new
 
-		#unless @weather.json_valid?
-		#	set_flash_message(:devisefailure, :invalid_zip_code)
-		#	flash[:alert] = 'We can\'t seem to find this zip_code in our records.'
-		#	redirect_to new_user_registration_path and return
-		#end
-
 		session[:zip_code] = @weather.zip_code
 
 		params[:user][:weather_id] = @weather.id

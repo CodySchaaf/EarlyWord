@@ -7,7 +7,7 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
 
   initialize: () ->
                 @options.widgets.bind('reset', @addAll)
-                @options.widgets.bind('all', @render)
+#                @options.widgets.bind('all', @render)
                 @on('newWidget', @newWidget)
 
   addAll: () =>
@@ -18,10 +18,10 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
             @$el.append(view.render().el)
 
   addButtons: (numOfWidgets) =>
-                newButton = []
-                newButton.push(new EarlyWord.Views.Widgets.NewButtonView({parent: this})) for [1..numOfWidgets]
+                @options.buttons = []
+                @options.buttons.push(new EarlyWord.Views.Widgets.NewButtonView({parent: this})) for [1..numOfWidgets]
                 index = 0
-                _.each newButton, (button) =>
+                _.each @options.buttons, (button) =>
                                       index += 1
                                       if index is numOfWidgets
                                         @$el.append button.render('last').el
@@ -41,4 +41,11 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
 
   newWidget: (button)->
                console.log button
-               @options.widgets.add({id: 2, location: 'New York', temperature: '97'})
+               new_widget = {id: 2, location: 'New York', temperature: '97'}
+               @options.widgets.add(new_widget)
+               view = new EarlyWord.Views.Widgets.WidgetView({ model: new_widget })
+               @options.buttons[0].remove()
+               if @$el.find('.widgets')
+                  @$el.find('.widgets').after(view.render().el)
+               else
+                  @$el.prepend(view.render().el)

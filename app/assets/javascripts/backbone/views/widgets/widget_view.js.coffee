@@ -11,7 +11,7 @@ class EarlyWord.Views.Widgets.WidgetView extends Backbone.View
 
   destroy: () ->
     @model.destroy()
-    this.remove()
+    @remove()
 
     return false
 

@@ -6,7 +6,8 @@ class EarlyWord.Views.Widgets.WidgetView extends Backbone.View
   events:
     "click .destroy" : "destroy"
 
-  tagName: "tr"
+  tagName: "div"
+  className: 'col-xs-2 widgets'
 
   destroy: () ->
     @model.destroy()
@@ -15,6 +16,5 @@ class EarlyWord.Views.Widgets.WidgetView extends Backbone.View
     return false
 
   render: ->
-    console.log @model
-		$(@el).html(@template(@model.toJSON() ))
-		@
+    $(@el).html(@template(@model.toJSON() ))
+    return this

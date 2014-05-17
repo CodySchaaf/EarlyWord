@@ -5,10 +5,10 @@
 #= require_tree ./routers
 
 window.EarlyWord =
-#	Models: {}
-#	Collections: {}
-#	Routers: {}
+	Models: {}
+	Collections: {}
+	Routers: {}
 	Views: {}
-#	init: (widgets)->
-#		window.router = new EarlyWord.Routers.WidgetsRouter({ widgets: widgets})
-#		Backbone.history.start()
+	init: (widgets)->
+		window.router = new EarlyWord.Routers.WidgetsRouter({ widgets: widgets})
+		Backbone.history.start()

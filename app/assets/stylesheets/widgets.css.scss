@@ -1,0 +1,51 @@
+@mixin ease-in-out($time) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+#custom-widgets {
+  height: 10em;
+  margin-top: 1em;
+
+  .widgets {
+    background: #303030;
+    color: white;
+    text-align: center;
+//    padding: 1.2em;
+    text-transform: uppercase;
+    height: 6em;
+    line-height: 6em;
+    margin-right: 2.5em;
+    padding: 0px;
+    span{
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1em;
+    }
+  }
+
+  .new-widget-buttons {
+    @include ease-in-out(.2s);
+    border-radius:10px;
+    border: dotted white;
+    margin-right: 1.25em;
+    height: 3em;
+    text-align: center;
+    padding-top: .8em;
+    font-size: 2em;
+    color: white;
+    opacity:0;
+    &.last{
+      margin-right: 0em;
+    }
+    &.button-hover{
+      opacity: 1;
+    }
+  }
+
+
+}
+

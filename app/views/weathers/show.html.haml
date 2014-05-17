@@ -1,6 +1,6 @@
 .wrapper
   .row.clearfix
-    .widget.col-xs-12
+    .main-weather.col-xs-12
       .leftside.col-xs-12.col-sm-6
         .front.col-xs-12
           .weather
@@ -27,8 +27,10 @@
             %li
               %span.spacer
             %span= @response.weather_now_long
-  .row.custom-widgets
-    .col-xs-12
+    .col-xs-12#custom-widgets
 
 :javascript
-  $(EarlyWord.init(#{@widgets.to_json.html_safe}));
+  $(function() {
+    window.router = new EarlyWord.Routers.WidgetsRouter({widgets: #{@widgets}});
+    Backbone.history.start();
+  });

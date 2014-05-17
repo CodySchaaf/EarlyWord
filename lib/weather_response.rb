@@ -16,8 +16,8 @@ class WeatherResponse
 			hourly_forecast:  [:hourly_forecast]
 	}
 
-	def initialize(json)
-		# @json = json
+	def initialize(response_json)
+		json = response_json.json.with_indifferent_access
 		RESPONSE_DATA.each do |method, json_key|
 			self.class.send(:attr_accessor, method)
 			self.send "#{method}=", json_key.inject(json, :[])

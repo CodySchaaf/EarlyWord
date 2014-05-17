@@ -25,9 +25,9 @@ class WeathersController < ApplicationController
 	end
 
 	def show
-		@widgets = {id: '1', location: '', temperature: ''}
+		@widgets = {id: 1, location: 'San Francisco', temperature: '78'}.to_json.html_safe
 		@weather = Weather.find(params[:id])
-		@response = WeatherResponse.new(@weather.update_json!.json.with_indifferent_access)
+		@response = WeatherResponse.new(@weather.update_json!)
 
 		@key_words = Weather.update_key_words_weather_yaml @response
 

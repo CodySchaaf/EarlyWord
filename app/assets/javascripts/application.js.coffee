@@ -12,8 +12,11 @@
 
 #= require jquery
 #= require jquery_ujs
+#= require turbolinks
 #= require underscore
 #= require backbone
-#= require turbolinks
+#= require backbone_rails_sync
+#= require backbone_datalink
+#= require backbone/early_word
 #= require bootstrap
 #= require_tree .

@@ -2,6 +2,7 @@ class EarlyWord.Models.Widget extends Backbone.Model
   paramRoot: 'widget'
 
   defaults:
+    zip_code: null
     location: null
     temperature: null
 

@@ -3,7 +3,7 @@ require "doppler/version"
 module Doppler
 	def self.fetch_weather(new_weather)
 		klass = new_weather.class
-		stored_weather = klass.find_by_zip_code(new_weather.zip_code)
+		stored_weather = klass.find_by(zip_code: new_weather.zip_code)
 
 		weather = stored_weather ? stored_weather.update_json! : klass.create_new(new_weather.zip_code)
 

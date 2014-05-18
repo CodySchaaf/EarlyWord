@@ -5,8 +5,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  WIDGETS = %w(widget_1 widget_2 widget_3 widget_4 widget_5)
-
   before_create :set_forecast_schedule
   before_save { self.email.downcase! }
   after_create :send_sign_up_email
@@ -30,13 +28,13 @@ class User < ActiveRecord::Base
   def widgets
 		#TODO: Tests!
 	  widgets = Weather.where(id: widget_zip_codes).index_by(&:id).slice(*widget_zip_codes).values
-	  widgets.map { |widget| WidgetResponse.new(widget).to_json }
+	  widgets.map { |widget| WidgetResponse.new(widget).to_json }.to_json.html_safe
   end
 
 	private
 
 	  def widget_zip_codes
-		  WIDGETS.map { |widget| self[widget] }.compact
+		  WidgetsController::WIDGETS.map { |widget| self[widget] }.compact
 	  end
 
 		def send_sign_up_email

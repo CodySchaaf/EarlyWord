@@ -32,5 +32,5 @@
 :javascript
   $(function() {
     window.router = new EarlyWord.Routers.WidgetsRouter({widgets: #{@widgets}});
-    Backbone.history.start();
+    Backbone.history.start({root: '/weathers/:id'});
   });

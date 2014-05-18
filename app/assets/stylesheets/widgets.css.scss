@@ -20,6 +20,9 @@
     line-height: 6em;
     margin-right: 2.5em;
     padding: 0px;
+    &.last {
+      margin-right: 0em;
+    }
     span{
       display: inline-block;
       vertical-align: middle;
@@ -45,25 +48,36 @@
       &.button-hover {
         opacity: 1;
       }
+      form#addWidget {
+        display: none;
+        input {
+          display: none;
+        }
+      }
     }
     &.form-view{
       color: white;
       background: #303030;
       opacity: 1;
+      i {
+        display: none;
+      }
+      form#addWidget {
+        display: inline;
+        input {
+          display: inline;
+        }
+      }
+    }
+    form#addWidget{
+      input{
+        margin-left: 3px;
+        width: 6em;
+      }
     }
   }
 
 
 }
 
-form#addWidget{
-  &.hidden{
-    display: none;
-  }
-  input{
-    margin-top: -2px;
-    margin-left: 2px;
-    width: 6em;
-  }
-}
 

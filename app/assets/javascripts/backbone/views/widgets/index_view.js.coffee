@@ -5,17 +5,25 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
 
   el: '#custom-widgets'
 
-  initialize: () ->
-                @options.widgets.bind('reset', @addAll)
+  initialize: (options) ->
+                console.log('index initialized')
+                @options = options
+#                @options.widgets.fetch({reset: true})
+                @listenTo(@options.widgets, 'reset', @addAll)
+                @listenTo(@options.widgets, 'add', @removeButton)
 #                @options.widgets.bind('all', @render)
                 @on('newWidget', @newWidget)
 
   addAll: () =>
-            @options.widgets.each(@addOne)
+            console.log(@options)
+            console.log(@options.widgets)
+            console.log(@options.widgets.models)
+            console.log(@options.widgets.models)
+            @options.widgets.models.each(@addOne)
 
   addOne: (widget) =>
             view = new EarlyWord.Views.Widgets.WidgetView({ model: widget })
-            @$el.append(view.render().el)
+            @$el.append(view.render(@options).el)
 
   addButtons: (numOfWidgets) =>
                 @options.buttons = []
@@ -29,10 +37,12 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
                                         @$el.append button.render().el
                                       return
 
+  removeButton: =>
+                  @options.buttons.shift().remove()
 
   render: =>
             console.log('rendering')
-            $(@el).html(@template(widgets: @options.widgets.toJSON()))
+#            $(@el).html(@template(widgets: @options.widgets.toJSON()))
             @addAll()
 
             numOfWidgets = (5 - @options.widgets.length)
@@ -40,12 +50,13 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
             return this
 
   newWidget: (button)->
-               console.log button
-               new_widget = {id: 2, location: 'New York', temperature: '97'}
-               @options.widgets.add(new_widget)
-               view = new EarlyWord.Views.Widgets.WidgetView({ model: new_widget })
-               @options.buttons[0].remove()
+               new_widget = {zip_code: button.$input.val().trim()}
+               created_widget = @options.widgets.create(new_widget,{error: (model,response) -> console.log(response.responseText)})
+               button.$input.val('')
+               view = new EarlyWord.Views.Widgets.WidgetView({ model: created_widget })
+               console.log(button)
+               button.toggleClasses(button.$el)
                if @$el.find('.widgets')
-                  @$el.find('.widgets').after(view.render().el)
+                  @$el.find('.widgets').last().after(view.render(@options).el)
                else
                   @$el.prepend(view.render().el)

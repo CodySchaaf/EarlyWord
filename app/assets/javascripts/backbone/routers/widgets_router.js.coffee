@@ -1,6 +1,6 @@
 class EarlyWord.Routers.WidgetsRouter extends Backbone.Router
   initialize: (options) ->
-                console.log options
+                @bodyView ||= new EarlyWord.Views.BodyView()
                 @widgets = new EarlyWord.Collections.WidgetsCollection()
                 @widgets.reset options.widgets
 
@@ -16,16 +16,14 @@ class EarlyWord.Routers.WidgetsRouter extends Backbone.Router
                $("#widgets").html(@view.render().el)
 
   index: ->
+           console.log('in index rout')
            @view = new EarlyWord.Views.Widgets.IndexView(widgets: @widgets)
            $("#widgets").html(@view.render().el)
 
   show: (id) ->
-          console.log id
-          console.log @widgets
           widget = @widgets.get(id)
-          console.log widget
+
           @view = new EarlyWord.Views.Widgets.ShowView(model: widget)
-          console.log @view
           $("#widgets").html(@view.render().el)
 
   edit: (id) ->

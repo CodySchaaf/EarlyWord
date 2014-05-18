@@ -101,7 +101,7 @@ gem 'weather-icons-rails'
 
 gem 'doppler', path: './lib/gems/doppler'
 
-gem 'rails-backbone'
+gem 'rails-backbone', '~> 1.1.0', git: 'git://github.com/codebrew/backbone-rails'
 
 
 group :development do

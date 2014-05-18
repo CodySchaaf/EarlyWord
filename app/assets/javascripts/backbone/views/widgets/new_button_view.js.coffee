@@ -2,19 +2,22 @@ EarlyWord.Views.Widgets ||= {}
 
 class EarlyWord.Views.Widgets.NewButtonView extends Backbone.View
   template: JST["backbone/templates/widgets/new_button"]
+  ENTER_KEY: 13
+  ESC_KEY: 27
 
   initialize: (options) ->
                 @parent = options.parent
-                @$input = @$('#widget_zip_code')
-                console.log(Backbone)
+#                @$input = @$('.widget_zip_code')
                 @listenTo(Backbone, 'body:click', @hideForm);
 
 
   events:
     'mouseover': 'toggleOpacity'
     'mouseout': 'toggleOpacity'
-    'keypress': 'newWidget'
     'click': 'showForm'
+    'keypress': 'newWidget'
+    'keyup': 'closeInput'
+    'submit form': (e) -> e.preventDefault()
 #    "submit #new-widget": "save"
 
   tagName: "div"
@@ -26,29 +29,35 @@ class EarlyWord.Views.Widgets.NewButtonView extends Backbone.View
   render: (klass)->
             $(@el).html(@template())
             $(@el).addClass('last') if klass
-            #            this.$("form").backboneLink(@model)
-
             return this
 
-  showForm: ->
+  showForm: (event) ->
+              event.stopImmediatePropagation()
               return if @$el.hasClass('form-view')
+              @toggleClasses(@$el)
+              @$el.find('input').focus()
 
   hideForm: ->
               return if not @$el.hasClass('form-view')
-              @toggleClasses
+              @toggleClasses(@$el)
 
   newWidget: (event) ->
+               @$input = @$('.widget_zip_code')
+               event.stopImmediatePropagation()
                return if @$el.hasClass('icon-view')
-               return if event.which isnt ENTER_KEY or event.which isnt ESC_KEY or not @$input.val().trim()
-               if event.which is ESC_KEY
-                  @toggleClasses
-                  return
+               if event.which is @ESC_KEY
+                 @toggleClasses
+                 return
+               return if event.which isnt @ENTER_KEY or not (@$input.val().trim().length is 5)
                @parent.trigger('newWidget', @)
 
+  closeInput: (event) ->
+                if event.which is @ESC_KEY
+                  @toggleClasses(@$el)
 
-  toggleClasses: ->
-                   @$el.toggleClass('icon-view')
-                   @$el.toggleClass('form-view')
+  toggleClasses: (button) ->
+                   button.toggleClass('icon-view')
+                   button.toggleClass('form-view')
 
 
 

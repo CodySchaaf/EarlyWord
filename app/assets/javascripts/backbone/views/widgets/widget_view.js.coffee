@@ -4,17 +4,20 @@ class EarlyWord.Views.Widgets.WidgetView extends Backbone.View
   template: JST["backbone/templates/widgets/widget"]
 
   events:
-    "click .destroy" : "destroy"
+    "click .destroy": "destroy"
 
   tagName: "div"
   className: 'col-xs-2 widgets'
 
+  initialize: ->
+                @listenTo(@model, 'change', @render);
+
   destroy: () ->
-    @model.destroy()
-    @remove()
+             @model.destroy()
+             @remove()
+             return false
 
-    return false
-
-  render: ->
-    $(@el).html(@template(@model.toJSON() ))
-    return this
+  render: (options)->
+            $(@el).html(@template(@model.toJSON()))
+            $(@el).addClass('last') if options and options.widgets.length is 5
+            return this

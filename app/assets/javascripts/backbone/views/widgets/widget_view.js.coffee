@@ -19,5 +19,5 @@ class EarlyWord.Views.Widgets.WidgetView extends Backbone.View
 
   render: (options)->
             $(@el).html(@template(@model.toJSON()))
-            $(@el).addClass('last') if options and options.widgets.length is 5
+            $(@el).addClass('last') if options.widgets and options.widgets.length is 5
             return this

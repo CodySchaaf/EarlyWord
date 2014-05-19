@@ -28,9 +28,18 @@
               %span.spacer
             %span= @response.weather_now_long
     .col-xs-12#custom-widgets
+      - if !signed_in?
+        - 4.times do
+          .new-widget-buttons.not-singed-in.col-xs-2.icon-view{type: "button", 'data-container'=>'body', 'data-toggle'=>"popover"}
+            %i.fa.fa-plus
+        .new-widget-buttons.not-singed-in.col-xs-2.icon-view.last{type: "button", 'data-container'=>'body', 'data-toggle'=>"popover"}
+          %i.fa.fa-plus
+        #popover-head.hide Please sign in to use this feature.
+        #popover-content.hide= link_to('Login', new_user_session_path)
 
-:javascript
-  $(function() {
-    window.router = new EarlyWord.Routers.WidgetsRouter({widgets: #{@widgets}});
-    Backbone.history.start({root: '/weathers/:id'});
-  });
+- if signed_in?
+  :javascript
+    $(function() {
+      window.router = new EarlyWord.Routers.WidgetsRouter({widgets: #{@widgets.to_json.html_safe}});
+      Backbone.history.start({root: '/weathers/:id'});
+    });

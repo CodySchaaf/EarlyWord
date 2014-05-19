@@ -44,7 +44,7 @@
     &.icon-view {
       border: dotted white;
       color: white;
-      opacity: 0;
+      opacity: .1;
       &.button-hover {
         opacity: 1;
       }
@@ -76,7 +76,6 @@
       }
     }
   }
-
 
 }
 

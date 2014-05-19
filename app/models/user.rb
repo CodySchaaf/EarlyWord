@@ -25,10 +25,14 @@ class User < ActiveRecord::Base
 	  end
   end
 
+  def existing_widget?(id)
+	  WidgetsController::WIDGETS.any? { |widget| self[widget] == id }
+  end
+
   def widgets
 		#TODO: Tests!
 	  widgets = Weather.where(id: widget_zip_codes).index_by(&:id).slice(*widget_zip_codes).values
-	  widgets.map { |widget| WidgetResponse.new(widget).to_json }.to_json.html_safe
+	  widgets.map { |widget| WidgetResponse.new(widget).to_widget }
   end
 
 	private

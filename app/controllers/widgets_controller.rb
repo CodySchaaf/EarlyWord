@@ -7,8 +7,15 @@ class WidgetsController < ApplicationController
 		if signed_in?
 			weather = Weather.get_weather Weather.new(widget_params)
 			@widget = WidgetResponse.new(weather)
+			empty_widget = WIDGETS.find { |widget| current_user[widget.to_sym].nil? }
 
-			if(empty_widget = WIDGETS.find { |widget| current_user[widget.to_sym].nil? })
+			if @widget.location[/Not Found/]
+				@widget.location = 'Not Found'
+				@widget.id =  0
+			elsif empty_widget && current_user.existing_widget?(@widget.id)
+				@widget.location = 'Duplicate!'
+				@widget.id =  0
+			elsif empty_widget
 				current_user.update_attributes!(empty_widget.to_sym => @widget.id)
 			else
 				return render json: 'Already Have 5 Widgets', status: :unprocessable_entity

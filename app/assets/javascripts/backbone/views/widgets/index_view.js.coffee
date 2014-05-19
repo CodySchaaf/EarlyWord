@@ -8,10 +8,10 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
   initialize: (options) ->
                 console.log('index initialized')
                 @options = options
-#                @options.widgets.fetch({reset: true})
+                #                @options.widgets.fetch({reset: true})
                 @listenTo(@options.widgets, 'reset', @addAll)
                 @listenTo(@options.widgets, 'add', @removeButton)
-#                @options.widgets.bind('all', @render)
+                #                @options.widgets.bind('all', @render)
                 @on('newWidget', @newWidget)
 
   addAll: () =>
@@ -19,7 +19,7 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
             console.log(@options.widgets)
             console.log(@options.widgets.models)
             console.log(@options.widgets.models)
-            @options.widgets.models.each(@addOne)
+            @options.widgets.each(@addOne)
 
   addOne: (widget) =>
             view = new EarlyWord.Views.Widgets.WidgetView({ model: widget })
@@ -27,22 +27,22 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
 
   addButtons: (numOfWidgets) =>
                 @options.buttons = []
-                @options.buttons.push(new EarlyWord.Views.Widgets.NewButtonView({parent: this})) for [1..numOfWidgets]
+                @options.buttons.push(new EarlyWord.Views.Widgets.NewButtonView({ parent: this })) for [1..numOfWidgets]
                 index = 0
                 _.each @options.buttons, (button) =>
-                                      index += 1
-                                      if index is numOfWidgets
-                                        @$el.append button.render('last').el
-                                      else
-                                        @$el.append button.render().el
-                                      return
+                                           index += 1
+                                           if index is numOfWidgets
+                                             @$el.append button.render('last').el
+                                           else
+                                             @$el.append button.render().el
+                                           return
 
   removeButton: =>
                   @options.buttons.shift().remove()
 
   render: =>
             console.log('rendering')
-#            $(@el).html(@template(widgets: @options.widgets.toJSON()))
+            #            $(@el).html(@template(widgets: @options.widgets.toJSON()))
             @addAll()
 
             numOfWidgets = (5 - @options.widgets.length)
@@ -50,13 +50,19 @@ class EarlyWord.Views.Widgets.IndexView extends Backbone.View
             return this
 
   newWidget: (button)->
-               new_widget = {zip_code: button.$input.val().trim()}
-               created_widget = @options.widgets.create(new_widget,{error: (model,response) -> console.log(response.responseText)})
+               new_widget = { zip_code: button.$input.val().trim() }
+               created_widget = @options.widgets.create new_widget,
+                                                        wait: true
+                                                        success: ->
+                                                                   console.log "Success"
+
+                                                          error: (model, jqXHR) ->
+                                                                   console.log "Error"
+                                                                   console.log jqXHR.responseText
                button.$input.val('')
-               view = new EarlyWord.Views.Widgets.WidgetView({ model: created_widget })
-               console.log(button)
                button.toggleClasses(button.$el)
+               view = new EarlyWord.Views.Widgets.WidgetView({ model: created_widget })
                if @$el.find('.widgets')
-                  @$el.find('.widgets').last().after(view.render(@options).el)
+                 @$el.find('.widgets').last().after(view.render(@options).el)
                else
-                  @$el.prepend(view.render().el)
+                 @$el.prepend(view.render().el)

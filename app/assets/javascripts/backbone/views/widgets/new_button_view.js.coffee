@@ -7,7 +7,7 @@ class EarlyWord.Views.Widgets.NewButtonView extends Backbone.View
 
   initialize: (options) ->
                 @parent = options.parent
-#                @$input = @$('.widget_zip_code')
+                #                @$input = @$('.widget_zip_code')
                 @listenTo(Backbone, 'body:click', @hideForm);
 
 
@@ -17,7 +17,9 @@ class EarlyWord.Views.Widgets.NewButtonView extends Backbone.View
     'click': 'showForm'
     'keypress': 'newWidget'
     'keyup': 'closeInput'
-    'submit form': (e) -> e.preventDefault()
+    'submit form': (e) ->
+                     e.preventDefault()
+                     e.stopPropagation()
 #    "submit #new-widget": "save"
 
   tagName: "div"

@@ -26,7 +26,8 @@ class EarlyWord.Views.Widgets.NewView extends Backbone.View
         window.location.hash = "/#{@model.id}"
 
       error: (widget, jqXHR) =>
-        @model.set({errors: $.parseJSON(jqXHR.responseText)})
+#        @model.set({errors: $.parseJSON(jqXHR.responseText)})
+        console.log({errors: $.parseJSON(jqXHR.responseText)})
     )
 
   render: ->

@@ -11,17 +11,22 @@ class WidgetResponse
 		@widget = widget
 		@json = widget.json.with_indifferent_access
 		@id = widget.id
-		RESPONSE_DATA.each do |method, json_key|
-			self.class.send(:attr_accessor, method)
-			self.send "#{method}=", json_key.inject(json, :[])
+		if widget.not_found?
+			self.class.send(:attr_accessor, :location)
+			@location = 'Not Found'
+		else
+			RESPONSE_DATA.each do |method, json_key|
+				self.class.send(:attr_accessor, method)
+				self.send "#{method}=", json_key.inject(json, :[])
+			end
 		end
 	end
 
 	def degrees_f
-		"#{temp_f} &deg; F"
+		temp_f ? "#{temp_f} &deg; F" : nil
 	end
 
-	def to_json
+	def to_widget
 		# {id: widget.id, temperature: degrees_f, location: location}.to_json.html_safe
 		{id: widget.id, temperature: degrees_f, location: location}
 	end
